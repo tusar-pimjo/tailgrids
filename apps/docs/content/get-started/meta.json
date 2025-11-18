@@ -1,0 +1,11 @@
+{
+  "title": "Get Started",
+  "pages": [
+    "introduction",
+    "quick-start",
+    "framework-guides",
+    "usage",
+    "upgrade-guide",
+    "license"
+  ]
+}

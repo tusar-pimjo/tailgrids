@@ -1,0 +1,33 @@
+{
+  "title": "Components",
+  "pages": [
+    "accordion",
+    "alert",
+    "avatar",
+    "badge",
+    "breadcrumbs",
+    "button",
+    "button-group",
+    "checkbox",
+    "date-picker",
+    "dropdown",
+    "input",
+    "link",
+    "list",
+    "otp-input",
+    "pagination",
+    "popover",
+    "progress",
+    "radio-input",
+    "skeleton",
+    "social-button",
+    "spinner",
+    "table",
+    "tabs",
+    "text-area",
+    "time-picker",
+    "toast",
+    "toggle",
+    "tooltip"
+  ]
+}
