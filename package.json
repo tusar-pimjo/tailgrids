@@ -9,7 +9,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "cli:build": "npm run --workspace @pimjo_johurul/cli build",
     "cli:publish": "npm run --workspace @pimjo_johurul/cli publish",
-    "publish": "changeset publish",
     "check-types": "turbo run check-types",
     "release": "changeset version"
   },
