@@ -1,7 +1,7 @@
 {
   "name": "@pimjo_johurul/cli",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for adding TailGrids Core components to React projects.",
   "license": "MIT",
   "publishConfig": {
@@ -13,9 +13,7 @@
   "scripts": {
     "dev": "tsup --watch",
     "dev:link": "npm run build && npm link --global",
-    "build": "tsup",
-    "publish": "changeset publish",
-    "release": "changeset version"
+    "build": "tsup"
   },
   "keywords": [
     "tailgrids",
