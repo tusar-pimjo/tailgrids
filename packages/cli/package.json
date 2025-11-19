@@ -1,5 +1,5 @@
 {
-  "name": "@tailgrids/cli",
+  "name": "@pimjo_johurul/cli",
   "type": "module",
   "version": "1.0.0",
   "description": "CLI for adding TailGrids Core components to React projects.",
