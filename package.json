@@ -8,7 +8,6 @@
     "build:packages": "turbo build --filter={./packages/*}",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "cli:build": "npm run build -- --filter=@tailgrids/cli",
     "check-types": "turbo run check-types",
     "changeset:add": "changeset add",
     "changeset:release": "changeset version"
