@@ -21,6 +21,9 @@
     "directory": "/packages/icons"
   },
   "homepage": "https://tailgrids.com",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "dependencies": {
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
