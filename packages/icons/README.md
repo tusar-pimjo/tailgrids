@@ -7,16 +7,19 @@ Beautiful React icon components for Tailgrids - A comprehensive collection of 18
 Install the package using your preferred package manager:
 
 ### npm
+
 ```bash
 npm i @tailgrids/icons
 ```
 
 ### yarn
+
 ```bash
 yarn add @tailgrids/icons
 ```
 
 ### pnpm
+
 ```bash
 pnpm add @tailgrids/icons
 ```
@@ -48,14 +51,13 @@ import { ArrowLeftSquare, FourK } from '@tailgrids/icons';
 function App() {
   return (
     <div>
-      {/* Custom size and color */}
-      <ArrowLeftSquare size={35} color="red" />
-      
+      {/* Custom size */}
+      <ArrowLeftSquare size={35} />
+
       {/* With className for styling */}
-      <FourK 
-        size={24} 
-        color="#ff6b6b" 
-        className="hover:scale-110 transition-transform cursor-pointer" 
+      <FourK
+        size={24}
+        className="hover:scale-110 transition-transform cursor-pointer"
       />
     </div>
   );
@@ -66,18 +68,17 @@ function App() {
 
 All icon components accept the following props:
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `size` | `number \| string` | `24` | Icon size (width and height in pixels) |
-| `color` | `string` | `'currentColor'` | Icon color (any valid CSS color) |
-| `className` | `string` | `undefined` | Additional CSS classes for styling |
-| `...props` | `SVGProps` | - | All standard SVG element props |
+| Prop        | Type               | Default     | Description                            |
+| ----------- | ------------------ | ----------- | -------------------------------------- |
+| `size`      | `number \| string` | `24`        | Icon size (width and height in pixels) |
+| `className` | `string`           | `undefined` | Additional CSS classes for styling     |
+| `...props`  | `SVGProps`         | -           | All standard SVG element props         |
 
 All icons also inherit standard SVG props through `React.SVGProps<SVGSVGElement>`, giving you full control over SVG attributes.
 
 ## Available Icons
 
-The package includes 180+ icons. Here are some examples:
+The package includes 170+ icons. Here are some examples:
 
 - `ArrowLeftSquare` - Square arrow pointing left
 - `FourK` - 4K display icon
@@ -113,5 +114,5 @@ Works in all modern browsers that support ES6+ and SVG.
 
 ## Links
 
-* [📖 Documentation](https://tailgrids.com/docs)
-* [💬 Support](https://tailgrids.com/support)
+- [📖 Documentation](https://tailgrids.com/docs)
+- [💬 Support](https://tailgrids.com/support)
