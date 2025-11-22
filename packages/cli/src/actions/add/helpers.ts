@@ -7,7 +7,7 @@ import { COMPONENT_REGISTRY_RAW_BASE_URL } from '../../constants/urls.ts';
 import { logger } from '../../utils/logger.ts';
 
 interface FileConfig {
-  type: 'block' | 'ui' | 'charts';
+  type: 'core';
   path: string;
   targetPath?: string;
 }
