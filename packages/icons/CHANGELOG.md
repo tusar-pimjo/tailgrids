@@ -1,5 +1,11 @@
 # @tailgrids/icons
 
+## 1.1.3
+
+### Patch Changes
+
+- fix: added all missing icons
+
 ## 1.1.2
 
 ### Patch Changes
