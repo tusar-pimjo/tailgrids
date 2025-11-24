@@ -1,58 +1,75 @@
 ---
 title: Quick Start
-description: Get up and running with TailGrids in minutes
+description: Get started with TailGrids in your React project.
 ---
+
+<HeaderBanner />
 
 # Quick Start
 
-Get started with TailGrids in just a few simple steps.
+This guide will help you quickly set up and start using TailGrids components in your React project.
 
-## Installation
+## Initialize TailGrids
 
-Install the required dependencies:
+Run the `init` command to set up TailGrids in your project.
 
 ```bash
-npm install tailwindcss class-variance-authority clsx tailwind-merge
+npx tailgrids@latest init
 ```
 
-## Setup Tailwind CSS
+This will prompt you to:
 
-Make sure Tailwind CSS is configured in your project. Add to your `tailwind.config.js`:
+- Select a theme for your components.
+- Configure an import alias for your project.
 
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+The `init` command will create the following files:
+
+- `tailgrids.config.json`: Configuration file for the TailGrids CLI.
+- `tailgrids.css`: The base styles for TailGrids components.
+- A `cn` utility file for merging Tailwind CSS classes.
+
+It will also install the required dependencies (`clsx`, `@tailwindcss/forms`, and `tailwind-merge`).
+
+## Configure Your Project
+
+After the `init` command finishes, you'll need to follow these steps:
+
+### **Add Styles to Your Project**
+
+Copy the contents of the generated `tailgrids.css` file and paste them into your main CSS file (e.g., `globals.css` or `app.css`).
+
+## Add Components
+
+Now you can start adding TailGrids components to your project using the `add` command.
+
+```bash
+npx tailgrids add <component-name>
 ```
 
-## Add Utility Function
+For example, to add a button component, run:
 
-Create a `cn` utility function for merging class names:
+```bash
+npx tailgrids add button
+```
 
-```ts
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+This will add the `button` component to your project, and you can start using it right away.
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+## Import and Use Components
+
+You can now import and use the components you've added in your application.
+
+```typescript filename="src/app/page.tsx"
+import { Button } from '@/components/core/button'; // Adjust the import path based on your alias and component location
+
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Button variant="primary">Hello TailGrids!</Button>
+    </main>
+  );
 }
 ```
 
-## Use Components
+---
 
-Now you can start using TailGrids components in your project:
-
-```tsx
-import { Button } from "@/components/button";
-
-export default function MyPage() {
-  return <Button variant="primary">Click me</Button>;
-}
-```
-
-## Next Steps
+This is a basic quick start. For more detailed usage, customization options, and a full list of available components, please refer to the other sections of our documentation.

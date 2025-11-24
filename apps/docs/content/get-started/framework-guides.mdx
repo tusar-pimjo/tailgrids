@@ -1,59 +1,186 @@
 ---
 title: Framework Guides
-description: Integration guides for popular frameworks
+description: Install and configure Tailgrids Components for Vite and NextJs
 ---
 
 # Framework Guides
 
 Learn how to integrate TailGrids with your favorite framework.
 
-## Next.js
+## NextJs
 
-TailGrids works seamlessly with Next.js. Follow the [Quick Start](/get-started/quick-start) guide and ensure you have the App Router or Pages Router configured.
+### Create project
 
-### App Router
+Start by creating a new React project using `NextJs`. Select the **TypeScript + TailwindCSS** template:
 
-```tsx
-// app/page.tsx
-import { Button } from "@/components/button";
+```bash
+npx create-next-app@latest --ts --tailwind --import-alias "@/"
+```
 
-export default function Home() {
-  return (
-    <main>
-      <Button>Get Started</Button>
-    </main>
-  );
+### Run the CLI
+
+Run the `tailgrids/cli` init command to setup your project:
+
+```bash
+npx @tailgrids/cli init
+```
+
+You will be asked a few questions to configure `tailgrids.json`.
+
+```txt
+Which theme would you like to use? › Default
+```
+
+### Add Components
+
+You can now start adding components to your project.
+
+```bash
+npx @tailgrids/cli add button
+```
+
+The command above will add the `Button` component to your project. You can then import it like this:
+
+```tsx showLineNumbers title="src/App.tsx"
+import { Button } from "@/components/core/button";
+
+function App() {
+	return (
+		<div className="flex min-h-svh flex-col items-center justify-center">
+			<Button>Click me</Button>
+		</div>
+	);
+}
+
+export default App;
+```
+
+## Vite.js
+
+### Create project
+
+Start by creating a new React project using `vite`. Select the **React + TypeScript** template:
+
+```bash
+npm create vite@latest
+```
+
+### Add Tailwind CSS
+
+```bash
+npm install tailwindcss @tailwindcss/vite
+```
+
+Replace everything in `src/index.css` with the following:
+
+```css title="src/index.css"
+@import "tailwindcss";
+```
+
+### Edit tsconfig.json file
+
+The current version of Vite splits TypeScript configuration into three files, two of which need to be edited.
+Add the `baseUrl` and `paths` properties to the `compilerOptions` section of the `tsconfig.json` and
+`tsconfig.app.json` files:
+
+```ts title="tsconfig.json" {11-16} showLineNumbers
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
 }
 ```
 
-## React
+### Edit tsconfig.app.json file
 
-For standard React applications:
+Add the following code to the `tsconfig.app.json` file to resolve paths, for your IDE:
 
-```bash
-npm install react react-dom
-npm install tailwindcss class-variance-authority clsx tailwind-merge
+```ts title="tsconfig.app.json" {4-9} showLineNumbers
+{
+  "compilerOptions": {
+    // ...
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+    // ...
+  }
+}
 ```
 
-## Vite
+### Update vite.config.ts
 
-TailGrids works great with Vite:
+Add the following code to the vite.config.ts so your app can resolve paths without error:
 
 ```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm install tailwindcss class-variance-authority clsx tailwind-merge
+npm install -D @types/node
 ```
 
-## Remix
+```typescript title="vite.config.ts" showLineNumbers {1,2,8-13}
+import path from "path";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
-Integration with Remix is straightforward. Follow the standard setup and add components to your routes.
+// https://vite.dev/config/
+export default defineConfig({
+	plugins: [react(), tailwindcss()],
+	resolve: {
+		alias: {
+			"@": path.resolve(__dirname, "./src")
+		}
+	}
+});
+```
 
-## Astro
+### Run the CLI
 
-TailGrids components can be used in Astro with the React integration:
+Run the `tailgrids/cli` init command to setup your project:
 
 ```bash
-npx astro add react
-npx astro add tailwind
+npx @tailgrids/cli init
+```
+
+You will be asked a few questions to configure `tailgrids.json`.
+
+```txt
+Which theme would you like to use? › Default
+```
+
+### Add Components
+
+You can now start adding components to your project.
+
+```bash
+npx @tailgrids/cli add button
+```
+
+The command above will add the `Button` component to your project. You can then import it like this:
+
+```tsx showLineNumbers title="src/App.tsx"
+import { Button } from "@/components/core/button";
+
+function App() {
+	return (
+		<div className="flex min-h-svh flex-col items-center justify-center">
+			<Button>Click me</Button>
+		</div>
+	);
+}
+
+export default App;
 ```
