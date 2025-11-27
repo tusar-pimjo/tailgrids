@@ -1,44 +1,47 @@
-# .
+# TailGrids Documentation
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+This is the official documentation for TailGrids, a library of UI components for Tailwind CSS.
 
-Run development server:
+## Overview
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
+This is a [Next.js](https://nextjs.org/) application built with [Fumadocs](https://fumadocs.dev/) to create a powerful and searchable documentation site for TailGrids. The documentation is written in MDX and is located in the `content` directory.
 
-Open http://localhost:3000 with your browser to see the result.
+## Technologies Used
 
-## Explore
+- [Next.js](https://nextjs.org/) - A React framework for building production-ready applications.
+- [Fumadocs](https://fumadocs.dev/) - A framework for building documentation sites with Next.js.
+- [React](https://react.dev/) - A JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
+- [MDX](https://mdxjs.com/) - A format that allows you to write JSX in your Markdown documents.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
 
-In the project, you can see:
+## Getting Started
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+To get started with the documentation site locally, follow these steps:
 
-| Route                     | Description                         |
-| ------------------------- | ----------------------------------- |
-| `app/(docs)`              | The documentation layout and pages. |
-| `app/api/search/route.ts` | The Route Handler for search.       |
+1.  **Install dependencies:**
 
-### Fumadocs MDX
+    ```bash
+    npm install
+    ```
 
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
+2.  **Run the development server:**
 
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
+    ```bash
+    npm run dev
+    ```
 
-## Learn More
+3.  **Open your browser:**
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
+    Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+## Content Management
+
+The documentation content is located in the `content` directory. The content is written in MDX, which allows you to use React components within your Markdown files.
+
+The `content` directory is organized into the following sections:
+
+- `components`: Contains the documentation for each TailGrids component.
+- `get-started`: Contains the "Get Started" guides, such as installation and usage instructions.
+
+To add a new documentation page, simply create a new `.mdx` file in the appropriate directory. The file will be automatically picked up by the Fumadocs content pipeline.

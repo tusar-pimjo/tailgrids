@@ -1,12 +1,5 @@
 {
-  "title": "Get Started",
-  "defaultOpen": true,
-  "pages": [
-    "introduction",
-    "quick-start",
-    "framework-guides",
-    "usage",
-    "upgrade-guide",
-    "license"
-  ]
+	"title": "Get Started",
+	"defaultOpen": true,
+	"pages": ["quick-start", "framework-guides", "license"]
 }
