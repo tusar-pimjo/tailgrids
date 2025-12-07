@@ -1,5 +1,11 @@
 # @tailgrids/icons
 
+## 2.0.0
+
+### Major Changes
+
+- Revised icon names; consistent with Figma
+
 ## 1.2.0
 
 ### Minor Changes
