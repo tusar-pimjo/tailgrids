@@ -4,6 +4,8 @@ const withMDX = createMDX();
 
 /** @type {import('next').NextConfig} */
 const config = {
+  basePath: '/docs',
+  assetPrefix: '/docs',
   reactStrictMode: true,
 };
 
