@@ -1,21 +1,22 @@
 "use client";
 
-import Link from "next/link";
-import { Menu } from "lucide-react";
-import { useSearchContext } from "fumadocs-ui/provider";
-import { useSidebar } from "fumadocs-ui/provider";
-import { useTheme } from "next-themes";
-import Image from "next/image";
+import LogoDarkMode from "@/assets/logo/dark-mode.svg";
+import LogoLightMode from "@/assets/logo/light-mode.svg";
 import {
   DiscordIcon,
   GithubIcon,
   MoonIcon,
   SearchIcon,
   SunIcon,
-  XIcon,
+  XIcon
 } from "@/icons";
-import VersionDropdown from "./version-dropdown";
+import { useSearchContext, useSidebar } from "fumadocs-ui/provider";
+import { Menu } from "lucide-react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import Link from "next/link";
 import HeaderNav from "./header-nav";
+import VersionDropdown from "./version-dropdown";
 
 export default function GlobalHeader() {
   const { setOpenSearch } = useSearchContext();
@@ -31,17 +32,17 @@ export default function GlobalHeader() {
             {/* Logo */}
             <Link href="/" className="flex shrink-0 items-center gap-2">
               <Image
-                src="/images/logo.svg"
+                src={LogoLightMode}
                 width={150}
                 height={40}
-                className="block dark:hidden"
+                className="dark:hidden"
                 alt="TailGrids Logo"
               />
               <Image
-                src="/images/logo-white.svg"
+                src={LogoDarkMode}
                 width={150}
                 height={40}
-                className="hidden dark:block"
+                className="not-dark:hidden"
                 alt="TailGrids Logo"
               />
             </Link>

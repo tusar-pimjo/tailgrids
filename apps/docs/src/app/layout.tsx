@@ -1,8 +1,8 @@
 import { RootProvider } from "fumadocs-ui/provider/next";
 //@ts-ignore
-import "./global.css";
-import { DM_Sans, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
+import { DM_Sans, Geist_Mono } from "next/font/google";
+import "./global.css";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -23,6 +23,10 @@ const isProductionDeployment =
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+  title: {
+    template: "%s | Tailgrids Docs",
+    default: "Tailgrids Docs"
+  },
   robots: isProductionDeployment
     ? {
         index: true,
