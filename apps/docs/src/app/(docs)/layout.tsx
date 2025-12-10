@@ -16,7 +16,7 @@ export default function Layout({ children }: LayoutProps<"/">) {
           collapsible: false,
           // Enable responsive sidebar: drawer on mobile, persistent on desktop
           enabled: true,
-          banner: <ThemeToggleLink />,
+          banner: <ThemeToggleLink />
         }}
       >
         <ContainerWithGrid>{children}</ContainerWithGrid>
