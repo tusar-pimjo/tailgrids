@@ -20,6 +20,15 @@ TailGrids is designed for real-world production use. Every component follows mod
 - Beautiful **open-source SVG icons** library included
 ---
 
+### 🔗 Useful Links
+
+* **Website** – [https://tailgrids.com](https://tailgrids.com)
+* **Documentation** – [https://tailgrids.com/docs](https://tailgrids.com/docs)
+* **Components** – [https://tailgrids.com/docs/components](https://tailgrids.com/docs/components)
+* **Templates** – [https://tailgrids.com/templates](https://tailgrids.com/templates)
+* **Changelog & Updates** – [https://tailgrids.com/blog](https://tailgrids.com/blog)
+* **GitHub Issues** – Use this repo to report bugs or request features
+
 ## ✨ What’s Included
 
 ### React UI Components
@@ -122,5 +131,7 @@ export default function Home() {
   return <Button variant="primary">Hello TailGrids!</Button>;
 }
 ```
+---
+
 
 
