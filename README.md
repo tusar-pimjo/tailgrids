@@ -18,7 +18,6 @@ TailGrids is designed for real-world production use. Every component follows mod
 - Built-in support for **Next.js**, Storybook, ESLint, Prettier & Playwright
 - Unified free + pro ecosystem (same design language)
 - Beautiful **open-source SVG icons** library included
-
 ---
 
 ## ✨ What’s Included
@@ -52,7 +51,6 @@ Ready-to-use templates that combine components and blocks into complete pages an
 ## 🧠 Built for Developers
 
 TailGrids focuses on developer experience and maintainability.
-
 - Clean, readable React components  
 - Utility-first styling with Tailwind CSS  
 - Easy to customize and extend  
