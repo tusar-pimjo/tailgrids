@@ -2,12 +2,13 @@ import { source } from "@/lib/source";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import { baseOptions, ThemeToggleLink } from "@/lib/layout.shared";
 import GlobalHeader from "@/components/global-header";
-import { Container } from "lucide-react";
+
 import { ContainerWithGrid } from "@/components/ContainerGrid";
+import Footer from "@/components/Footer";
 
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
-    <>
+    <div className="">
       <GlobalHeader />
       <DocsLayout
         tree={source.pageTree}
@@ -19,8 +20,11 @@ export default function Layout({ children }: LayoutProps<"/">) {
           banner: <ThemeToggleLink />
         }}
       >
-        <ContainerWithGrid>{children}</ContainerWithGrid>
+        <ContainerWithGrid>
+          {children}
+          <Footer />
+        </ContainerWithGrid>
       </DocsLayout>
-    </>
+    </div>
   );
 }

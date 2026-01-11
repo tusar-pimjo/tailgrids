@@ -24,7 +24,7 @@ export default function GlobalHeader() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-30 w-full   bg-white 0 dark:bg-gray-950">
+    <header className="sticky top-0 z-999 w-full   bg-white 0 dark:bg-gray-950">
       <div className="border-b dark:border-gray-800 border-gray-200 ">
         <div className="relative mx-auto max-w-[1620px] h-20 flex items-center px-4 2xl:px-8">
           {/* LEFT SECTION */}
