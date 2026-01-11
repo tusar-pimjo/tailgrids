@@ -85,25 +85,52 @@ Accessibility is not an afterthought.
 
 ## 📦 Installation
 
-Get up and running with TailGrids in your React project in just a few steps. Make sure you have Tailwind CSS installed in your React / Next.js project.
+Here’s a **more simplified and ultra-clear** version, perfect for a README:
 
-### Initialize TailGrids
+---
 
-Run the TailGrids init command in your project root:
+### Quick Start
+
+Set up TailGrids in your React project in a few minutes.
+
+#### Install & Initialize
+
+Run this in your project root:
 
 ```bash
 npx tailgrids@latest init
 ```
-Then import components:
+
+This sets up TailGrids, creates the config and base styles, and installs required dependencies.
+
+---
+
+#### Add Styles
+
+Copy the contents of `tailgrids.css` into your main CSS file, like `globals.css` or `app.css`.
+
+---
+
+#### Add a Component
+
+Add components using the CLI:
 
 ```bash
-import { Button } from '@/components/core/button';
+npx tailgrids add button
+```
+
+---
+
+#### Use It
+
+Import and use the component:
+
+```jsx
+import { Button } from "@/components/core/button";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Button variant="primary">Hello TailGrids!</Button>
-    </main>
-  );
+  return <Button variant="primary">Hello TailGrids!</Button>;
 }
 ```
+
+
