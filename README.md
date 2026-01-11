@@ -98,7 +98,7 @@ Set up TailGrids in your React project in a few minutes.
 Run this in your project root:
 
 ```bash
-npx tailgrids@latest init
+npx @tailgrids/cli@latest init
 ```
 
 This sets up TailGrids, creates the config and base styles, and installs required dependencies.
@@ -116,7 +116,7 @@ Copy the contents of `tailgrids.css` into your main CSS file, like `globals.css`
 Add components using the CLI:
 
 ```bash
-npx tailgrids add button
+npx @tailgrids/cli@latest add button
 ```
 ---
 
