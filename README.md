@@ -1,23 +1,25 @@
 # Free React UI Components powered by Tailwind CSS
 
-Tailgrids is an open-source React UI component library built with Tailwind CSS. Ship modern web applications faster through an extensive collection of production-ready components, blocks, and templates. All featuring a sleek, handcrafted, and pixel-perfect design optimized for exceptional user experience, high performance, accessibility, and consistent UI across projects. 
+Tailgrids is an open-source **React UI component library built with Tailwind CSS**. Ship modern web applications faster through an extensive collection of **production-ready components, blocks, and templates**. All featuring a **sleek, handcrafted, and pixel-perfect design optimized for exceptional user experience**, high performance, accessibility, and consistent UI across projects. 
 
-Build websites, dashboards, SaaS products, landing pages, and internal tools effortlessly, without reinventing the UI from scratch or relying on generic UI commonly available online. 
+Build human-centered websites, dashboards, SaaS products, landing pages, and internal tools effortlessly, **without reinventing the UI from scratch or relying on the generic UI**
 
 ---
 
 ### ✨ Feature Highlights
 
-TailGrids is designed for real-world production use. Every component follows modern UI patterns and works seamlessly with React and Tailwind CSS.
-- **500+ Free & Essential UI Components** – Buttons, Forms, Navbars, Footers, Cards, Modals, Alerts, Dropdowns, and much more
-- **React + TypeScript** first-class support (JSX/TSX rebuild in V3)
-- **Powered by Tailwind CSS** – full customization using utility classes
-- **Production-ready** – Optimized for performance, accessibility (a11y), dark mode & responsiveness
-- **New in V3** — CLI for instant component installation (`npx tailgrids add button`)
-- Modern **design tokens** & theme control system
-- Built-in support for **Next.js**, Storybook, ESLint, Prettier & Playwright
-- Unified free + pro ecosystem (same design language)
-- Beautiful **open-source SVG icons** library included
+TailGrids is built for real-world production. Every component follows modern UI patterns, feels natural to use, and works seamlessly with React and Tailwind CSS.
+
+* **High-quality premium design** – Clean, modern, and carefully crafted components that look polished out of the box
+* **500+ free and essential UI components** – Buttons, forms, navbars, footers, cards, modals, alerts, dropdowns, and more
+* **React + TypeScript first-class support** – Fully rebuilt with JSX/TSX in V3
+* **Powered by Tailwind CSS** – Full control and easy customization with utility classes
+* **Production-ready** – Optimized for performance, accessibility (a11y), dark mode, and responsiveness
+* **New in V3** – CLI for instant component installation (`npx tailgrids add button`)
+* Modern **design tokens** with a flexible theme system
+* Built-in support for **Next.js**, Storybook, ESLint, Prettier, and Playwright
+* Unified free + pro ecosystem with a consistent design language
+* Beautiful **open-source SVG icon** library included
 ---
 
 ### 🔗 Useful Links
