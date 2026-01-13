@@ -1,6 +1,8 @@
 # Free React UI Components powered by Tailwind CSS
 
-Tailgrids is an open-source **React UI component library built with Tailwind CSS**. Ship modern web applications faster through an extensive collection of **production-ready components, blocks, and templates**. All featuring a **sleek, handcrafted, and pixel-perfect design optimized for exceptional user experience**, high performance, accessibility, and consistent UI across projects. 
+Tailgrids is an open-source **React UI component library built with Tailwind CSS**. Ship modern web applications faster through an extensive collection of **production-ready components, blocks, and templates**. All featuring a **sleek, handcrafted, and pixel-perfect design optimized for exceptional user experience**, high performance, accessibility, and consistent UI across projects.
+
+[![Tailgrids](tailgrids.png)](https://tailgrids.com)
 
 Build human-centered websites, dashboards, SaaS products, landing pages, and internal tools effortlessly, **without reinventing the UI from scratch or relying on the generic UI**
 
