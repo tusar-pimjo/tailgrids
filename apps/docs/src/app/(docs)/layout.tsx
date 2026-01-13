@@ -9,7 +9,7 @@ import MobileNav from "@/components/mobile-nav";
 
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
-    <div className="">
+    <div>
       <GlobalHeader />
       <DocsLayout
         tree={source.pageTree}
