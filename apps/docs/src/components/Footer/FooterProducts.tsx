@@ -1,8 +1,14 @@
+import formboldWhite from "@/../public/images/products/formbold-white.svg";
 import formbold from "@/../public/images/products/formbold.svg";
+import graygridsWhite from "@/../public/images/products/graygrids-white.svg";
 import graygrids from "@/../public/images/products/graygrids.svg";
+import lineiconsWhite from "@/../public/images/products/lineicons-white.svg";
 import lineicons from "@/../public/images/products/lineicons.svg";
+import nextjstemplatesWhite from "@/../public/images/products/nextjstemplates-white.svg";
 import nextjstemplates from "@/../public/images/products/nextjstemplates.svg";
+import tailadminWhite from "@/../public/images/products/tailadmin-white.svg";
 import tailadmin from "@/../public/images/products/tailadmin.svg";
+import uideckWhite from "@/../public/images/products/uideck-white.svg";
 import uideck from "@/../public/images/products/uideck.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,31 +18,37 @@ const productsData = [
   {
     name: "Lineicons",
     logo: lineicons,
+    logoDark: lineiconsWhite,
     link: "https://lineicons.com/"
   },
   {
     name: "TailAdmin",
     logo: tailadmin,
+    logoDark: tailadminWhite,
     link: "https://tailadmin.com/"
   },
   {
     name: "Next.js Template",
     logo: nextjstemplates,
+    logoDark: nextjstemplatesWhite,
     link: "https://nextjstemplates.com/"
   },
   {
     name: "FormBold",
     logo: formbold,
+    logoDark: formboldWhite,
     link: "https://formbold.com/"
   },
   {
     name: "Graygrids",
     logo: graygrids,
+    logoDark: graygridsWhite,
     link: "https://graygrids.com/"
   },
   {
     name: "Uideck",
     logo: uideck,
+    logoDark: uideckWhite,
     link: "https://uideck.com/"
   }
 ];
@@ -59,19 +71,29 @@ export default function FooterProducts() {
               href={product.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/social flex h-20 items-center justify-center border-r border-tg-border-1 px-1 max-lg:border-b max-lg:last-of-type:border-b-0 max-lg:nth-[5]:border-b-0 lg:last-of-type:border-r-0"
+              className="group/social flex h-20 items-center justify-center border-r border-tg-border-1 px-1 max-lg:border-b max-lg:last-of-type:border-b-0 dark:border-tg-border-2 max-lg:nth-[5]:border-b-0 lg:last-of-type:border-r-0"
             >
               <span className="flex h-6 items-center justify-center overflow-hidden">
                 <span className="flex h-6 flex-col space-y-1 opacity-50 duration-200 ease-in-out group-hover/social:-translate-y-6 group-hover/social:opacity-100">
                   <Image
                     src={product.logo}
                     alt={product.name}
-                    className="h-5.5"
+                    className="h-5.5 dark:hidden"
+                  />
+                  <Image
+                    src={product.logoDark}
+                    alt={product.name}
+                    className="hidden h-5.5 dark:block"
                   />
                   <Image
                     src={product.logo}
                     alt={product.name}
-                    className="h-5.5"
+                    className="h-5.5 dark:hidden"
+                  />
+                  <Image
+                    src={product.logoDark}
+                    alt={product.name}
+                    className="hidden h-5.5 dark:block"
                   />
                 </span>
               </span>

@@ -194,14 +194,14 @@ export default function HeaderNav() {
                 <Link
                   href={menuItem.path}
                   target={menuItem.external ? "_blank" : "_self"}
-                  className="inline-flex items-center gap-0.5 rounded-lg px-2 py-1.5 text-sm font-medium text-tg-text-color duration-200 hover:bg-gray-100 hover:text-tg-title-color dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+                  className="inline-flex items-center gap-0.5 rounded-lg px-2 py-1.5 text-sm font-medium text-tg-text-color duration-200 hover:bg-gray-100 hover:text-tg-title-color dark:text-gray-400 dark:hover:bg-gray-900 dark:hover:text-white"
                 >
                   {menuItem.title}
                 </Link>
               ) : (
                 <>
                   <button
-                    className="inline-flex items-center gap-0.5 rounded-lg px-2 py-1.5 text-sm font-medium text-tg-text-color duration-200 hover:bg-gray-100 hover:text-tg-title-color dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+                    className="inline-flex items-center gap-0.5 rounded-lg px-2 py-1.5 text-sm font-medium text-tg-text-color duration-200 hover:bg-gray-100 hover:text-tg-title-color dark:text-gray-400 dark:hover:bg-gray-900 dark:hover:text-white"
                     onClick={() =>
                       setOpenDropdown(isOpen ? null : menuItem.title)
                     }
@@ -229,7 +229,7 @@ export default function HeaderNav() {
                       )}
                     >
                       {/* Center divider */}
-                      <div className="absolute top-2 left-1/2 h-[calc(100%-16px)] w-px -translate-x-1/2 bg-gray-200 dark:bg-gray-700" />
+                      <div className="absolute top-2 left-1/2 h-[calc(100%-16px)] w-px bg-gray-200 dark:bg-gray-700" />
 
                       {menuItem.children?.map((item, idx) => (
                         <Link

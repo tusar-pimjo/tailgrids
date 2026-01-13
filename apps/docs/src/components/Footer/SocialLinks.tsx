@@ -13,15 +13,13 @@ export default function SocialLinks({ className }: { className?: string }) {
           rel={social.external ? "noopener noreferrer" : undefined}
           aria-label={social.title}
           className={cn(
-            "flex cursor-pointer items-center justify-center rounded-lg text-gray-500 shadow-navbar-icon duration-200 hover:bg-gray-100 hover:text-tg-title-color hover:shadow-none",
+            "flex cursor-pointer items-center justify-center dark:hover:text-gray-200 dark:hover:bg-white/10 dark:bg-white/0.5 rounded-lg text-gray-500 dark:shadow-icon-dark shadow-navbar-icon duration-200 hover:bg-gray-100 hover:text-tg-title-color hover:shadow-none",
             social.title === "Github" ? "h-8 w-[63px] gap-1.5" : "size-8"
           )}
         >
           <span className="shrink-0">{social.icon}</span>
           {social.title === "Github" && (
-            <span className="text-sm font-medium text-tg-text-color-secondary">
-              1.5K
-            </span>
+            <span className="text-sm font-medium ">1.5K</span>
           )}
         </Link>
       ))}

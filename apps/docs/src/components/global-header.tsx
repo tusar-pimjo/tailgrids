@@ -18,6 +18,7 @@ import Link from "next/link";
 import HeaderNav from "./header-nav";
 import VersionDropdown from "./version-dropdown";
 import { User2 } from "@tailgrids/icons";
+import { Button } from "./ui/Button";
 
 export default function GlobalHeader() {
   const { setOpenSearch } = useSearchContext();
@@ -74,26 +75,28 @@ export default function GlobalHeader() {
 
           {/* RIGHT SECTION */}
           <div className="flex  justify-end items-center gap-5 flex-1 min-w-0">
-            <button
-              onClick={() => setOpenSearch(true)}
-              className="hidden lg:flex h-11 w-[260px] xl:w-[250px]  dark:bg-white/5 items-center gap-3 rounded-xl border border-gray-200 bg-white px-3 text-gray-400 dark:border-[#111827] transition"
-            >
-              <SearchIcon className="size-5" />
-              <span className="hidden xl:flex text-sm flex-1">
-                Quick search...
-              </span>
-              <span className="hidden xl:flex h-6.5 w-10 items-center dark:border-[#111827] justify-center rounded-lg border border-gray-100 text-xs">
-                ⌘ K
-              </span>
-            </button>
-            {/* Theme Toggle */}
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="hidden lg:flex size-11 shrink-0 items-center cursor-pointer justify-center dark:shadow-none dark:border-[#111827] dark:bg-white/5 rounded-xl shadow-navbar-icon  transition"
-            >
-              <SunIcon className="block dark:hidden text-gray-500" />
-              <MoonIcon className="hidden dark:block text-gray-400" />
-            </button>
+            <div className="flex gap-3 items-center">
+              <button
+                onClick={() => setOpenSearch(true)}
+                className="hidden lg:flex h-11 w-[260px] xl:w-[250px]  dark:bg-white/5 items-center gap-3 rounded-xl border border-gray-200 bg-white px-3 text-gray-400 dark:border-[#111827] transition"
+              >
+                <SearchIcon className="size-5" />
+                <span className="hidden xl:flex text-sm flex-1">
+                  Quick search...
+                </span>
+                <span className="hidden xl:flex h-6.5 w-10 items-center dark:border-[#111827] justify-center rounded-lg border border-gray-100 text-xs">
+                  ⌘ K
+                </span>
+              </button>
+              {/* Theme Toggle */}
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="hidden lg:flex size-10 shrink-0 items-center cursor-pointer justify-center dark:shadow-none dark:border-[#111827] dark:bg-white/5 rounded-xl shadow-navbar-icon  transition"
+              >
+                <SunIcon className="block dark:hidden text-gray-500" />
+                <MoonIcon className="hidden dark:block text-gray-400" />
+              </button>
+            </div>
             <div className="hidden md:flex gap-6">
               <div className="items-center gap-2 flex">
                 <a className="flex size-8 items-center justify-center rounded-[9px] dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none cursor-pointer dark:bg-white/5 dark:border-[#111827] ">
@@ -107,10 +110,16 @@ export default function GlobalHeader() {
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <a href="https://tailgrids.com/pro">Accounts</a>
                 <a
                   href="https://tailgrids.com/pro"
-                  className="custom-link-btn ml-3"
+                  className="text-gray-700 dark:text-gray-400 font-medium text-base hover:text-tg-text-color-secondary"
+                >
+                  Accounts
+                </a>
+                <a
+                  className="custom-link-btn-blue ml-4
+                  "
+                  href="https://tailgrids.com/pro"
                 >
                   Pricing & Faq
                 </a>

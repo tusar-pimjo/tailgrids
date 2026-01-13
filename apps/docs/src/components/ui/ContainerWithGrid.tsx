@@ -12,7 +12,7 @@ export function ContainerWithGrid({
   children,
   rootClassName,
   contentClassName,
-  darkBg,
+  darkBg
 }: Props) {
   return (
     <div
@@ -21,7 +21,7 @@ export function ContainerWithGrid({
         darkBg
           ? "bg-gray-950 [--pattern-fg:var(--border-2)]"
           : "bg-white [--pattern-fg:var(--border-1)]",
-        rootClassName,
+        rootClassName
       )}
     >
       {/* main content */}
@@ -36,7 +36,7 @@ export function ContainerWithGrid({
         className={cn(
           "relative -right-px col-start-1 row-span-full border-x border-x-(--pattern-fg)",
           "bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)]",
-          "bg-size-[10px_10px] bg-fixed",
+          "bg-size-[10px_10px] bg-fixed"
         )}
       />
 
@@ -45,7 +45,7 @@ export function ContainerWithGrid({
         className={cn(
           "relative -left-px col-start-3 row-span-full border-x border-x-(--pattern-fg)",
           "bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)]",
-          "bg-size-[10px_10px] bg-fixed",
+          "bg-size-[10px_10px] bg-fixed"
         )}
       />
     </div>
@@ -55,7 +55,7 @@ export function ContainerWithGrid({
 export function BorderLine({
   className,
   position,
-  darkBg,
+  darkBg
 }: {
   className?: string;
   position?: "top" | "bottom" | "left" | "right";
@@ -64,18 +64,14 @@ export function BorderLine({
   return (
     <div
       className={cn(
-        "absolute bg-(--pattern-fg)",
+        "absolute bg-(--pattern-fg) dark:[--pattern-fg:var(--border-2)] [--pattern-fg:var(--border-1)]",
         {
           "top-0 left-1/2 h-px w-[200vw] -translate-x-1/2": position === "top",
           "bottom-0 left-1/2 h-px w-[200vw] -translate-x-1/2":
             position === "bottom",
           "top-0 left-0 h-[200vh] w-px": position === "left",
-          "top-0 right-0 h-[200vh] w-px": position === "right",
-        },
-        darkBg
-          ? "[--pattern-fg:var(--border-2)]"
-          : "[--pattern-fg:var(--border-1)]",
-        className,
+          "top-0 right-0 h-[200vh] w-px": position === "right"
+        }
       )}
     />
   );
