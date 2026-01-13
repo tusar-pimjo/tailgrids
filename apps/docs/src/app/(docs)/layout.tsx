@@ -2,12 +2,14 @@ import { source } from "@/lib/source";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import { baseOptions, ThemeToggleLink } from "@/lib/layout.shared";
 import GlobalHeader from "@/components/global-header";
-import { Container } from "lucide-react";
+
 import { ContainerWithGrid } from "@/components/ContainerGrid";
+import Footer from "@/components/Footer";
+import MobileNav from "@/components/mobile-nav";
 
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
-    <>
+    <div>
       <GlobalHeader />
       <DocsLayout
         tree={source.pageTree}
@@ -16,11 +18,15 @@ export default function Layout({ children }: LayoutProps<"/">) {
           collapsible: false,
           // Enable responsive sidebar: drawer on mobile, persistent on desktop
           enabled: true,
-          banner: <ThemeToggleLink />
+          banner: <ThemeToggleLink />,
+          footer: <MobileNav />
         }}
       >
-        <ContainerWithGrid>{children}</ContainerWithGrid>
+        <ContainerWithGrid>
+          {children}
+          <Footer />
+        </ContainerWithGrid>
       </DocsLayout>
-    </>
+    </div>
   );
 }
