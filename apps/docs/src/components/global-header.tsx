@@ -126,6 +126,13 @@ export default function GlobalHeader() {
               </div>
             </div>
             {/* Mobile Menu - Hidden on lg+ where sidebar is always visible */}
+            {/* Mobile Search Button */}
+            <button
+              onClick={() => setOpenSearch(true)}
+              className="lg:hidden text-gray-700 dark:text-gray-300 hover:text-primary-500"
+            >
+              <SearchIcon className="size-6" />
+            </button>
             <button
               type="button"
               onClick={() => setOpen(!open)}

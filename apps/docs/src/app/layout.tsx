@@ -55,7 +55,7 @@ export default function Layout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <body className="flex flex-col min-h-screen bg-white dark:bg-[#030712] antialiased">
-        <RootProvider>{children}</RootProvider>
+        <RootProvider search={{ enabled: true }}>{children}</RootProvider>
       </body>
     </html>
   );

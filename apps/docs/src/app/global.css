@@ -419,3 +419,13 @@ aside#nd-sidebar-mobile > div:first-child > button {
     }
   }
 }
+
+/* Force search modal to be on top of everything on mobile */
+[role="dialog"][data-state="open"] {
+  z-index: 2147483647 !important; /* Max z-index */
+}
+
+/* Ensure backdrop is also high up */
+[data-radix-portal] {
+  z-index: 2147483647 !important;
+}

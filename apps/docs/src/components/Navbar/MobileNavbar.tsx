@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { SunIcon, MoonIcon } from "@/icons";
 import { Button } from "../ui/Button";
 import {
   AccountIconProfile,
@@ -13,7 +15,7 @@ import {
   ColoredVueIcon,
   CrossIcon,
   DashboardIcon,
-  HamburgerIcon,
+  HamburgerIcon
 } from "../ui/icons";
 import SearchBarNav from "./SearchBarNav";
 
@@ -25,6 +27,12 @@ export default function MobileNavbar() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
   const [showAccountPopup, setShowAccountPopup] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // TODO: Replace with actual auth state
   const isLoggedIn = true; // Set to true to show logged-in state
@@ -40,42 +48,42 @@ export default function MobileNavbar() {
       icon: <DashboardIcon className="size-5" />,
       description:
         "Core UI Components to kickstart any web projects - Open-source",
-      link: "/blocks/core",
+      link: "/blocks/core"
     },
     {
       title: "Application",
       icon: <DashboardIcon className="size-5" />,
       description:
         "Components crafted for build all kind of modern webapps and sites",
-      link: "/blocks/application",
+      link: "/blocks/application"
     },
     {
       title: "Dashboard",
       icon: <DashboardIcon className="size-5" />,
       description:
         "Build data-rich modern backends, dashboards and admin panels",
-      link: "/blocks/dashboard",
+      link: "/blocks/dashboard"
     },
     {
       title: "AI Components",
       icon: <DashboardIcon className="size-5" />,
       description: "All you need to create stunning AI tools & landing pages",
-      link: "/blocks/ai",
+      link: "/blocks/ai"
     },
     {
       title: "Marketing",
       icon: <DashboardIcon className="size-5" />,
       description:
         "All you need to create stunning and high-converting landing pages",
-      link: "/blocks/marketing",
+      link: "/blocks/marketing"
     },
     {
       title: "E-commerce",
       icon: <DashboardIcon className="size-5" />,
       description:
         "Components and Pages need to build complete online store UI",
-      link: "/blocks/ecommerce",
-    },
+      link: "/blocks/ecommerce"
+    }
   ];
 
   // Products Menu Data
@@ -84,20 +92,20 @@ export default function MobileNavbar() {
       title: "Tailgrids React.js",
       href: "/products/tailgrids-react",
       icon: <ColoredReactIcon className="size-6" />,
-      description: "Tailwind UI components for react.js",
+      description: "Tailwind UI components for react.js"
     },
     {
       title: "Tailgrids Vue.js",
       href: "/products/tailgrids-vue",
       icon: <ColoredVueIcon className="size-6" />,
-      description: "Tailwind UI components for vue.js",
+      description: "Tailwind UI components for vue.js"
     },
     {
       title: "Tailgrids Figma",
       href: "/figma",
       icon: <ColoredFigmaIcon className="size-6" />,
-      description: "Tailwind UI components for figma",
-    },
+      description: "Tailwind UI components for figma"
+    }
   ];
 
   // Resources Menu Data
@@ -122,7 +130,7 @@ export default function MobileNavbar() {
           />
         </svg>
       ),
-      description: "Connect, share, and grow with fellow users.",
+      description: "Connect, share, and grow with fellow users."
     },
     {
       title: "Support",
@@ -144,7 +152,7 @@ export default function MobileNavbar() {
           />
         </svg>
       ),
-      description: "Need help? Our team's here for you.",
+      description: "Need help? Our team's here for you."
     },
     {
       title: "Roadmap",
@@ -166,7 +174,7 @@ export default function MobileNavbar() {
           />
         </svg>
       ),
-      description: "Discover upcoming features and releases.",
+      description: "Discover upcoming features and releases."
     },
     {
       title: "Blog",
@@ -188,8 +196,8 @@ export default function MobileNavbar() {
           />
         </svg>
       ),
-      description: "Fresh news and product updates.",
-    },
+      description: "Fresh news and product updates."
+    }
   ];
 
   return (
@@ -213,7 +221,7 @@ export default function MobileNavbar() {
           ) : (
             <button
               onClick={() => setMobileSearchOpen(!mobileSearchOpen)}
-              className="flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-200 ease-linear hover:bg-gray-100"
+              className="flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-200 ease-linear hover:bg-gray-100 dark:hover:bg-gray-800"
               aria-label="Search"
             >
               <svg
@@ -225,11 +233,25 @@ export default function MobileNavbar() {
               >
                 <path
                   d="M11.2002 0C17.3857 0.000158454 22.4012 5.0135 22.4014 11.1982C22.4013 13.9316 21.4193 16.4346 19.792 18.3789L23.9062 22.4932C24.2967 22.8837 24.2967 23.5167 23.9062 23.9072C23.5157 24.2976 22.8826 24.2977 22.4922 23.9072L18.3779 19.792C16.4339 21.417 13.932 22.3974 11.2002 22.3975C5.01474 22.3972 0.000154394 17.383 0 11.1982C0.000185577 5.01355 5.01476 0.000244758 11.2002 0ZM11.2002 2C6.11895 2.00024 2.00019 6.1185 2 11.1982C2.00015 16.278 6.11893 20.3972 11.2002 20.3975C16.2815 20.3973 20.4012 16.2781 20.4014 11.1982C20.4012 6.11845 16.2815 2.00016 11.2002 2Z"
-                  fill="#9CA3AF"
+                  fill="currentColor"
+                  className="text-gray-500 dark:text-gray-400"
                 />
               </svg>
             </button>
           )}
+
+          {/* Theme Toggle */}
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-200 ease-linear hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Toggle Theme"
+          >
+            {mounted && theme === "dark" ? (
+              <MoonIcon className="size-5 text-gray-500 dark:text-gray-400" />
+            ) : (
+              <SunIcon className="size-5 text-gray-500 dark:text-gray-400" />
+            )}
+          </button>
 
           {/* Hamburger Menu */}
           <button
@@ -263,6 +285,10 @@ export default function MobileNavbar() {
           <div className="flex h-full flex-col">
             {/* Menu Items */}
             <div className="flex-1 space-y-1 p-4">
+              {/* Search Bar */}
+              <div className="mb-3">
+                <SearchBarNav />
+              </div>
               {/* Components Dropdown */}
               <div>
                 <button
@@ -296,7 +322,7 @@ export default function MobileNavbar() {
                         className="flex -translate-y-2.5 items-start gap-3 rounded-lg px-6 py-5 opacity-0 transition-all duration-200 ease-linear hover:bg-gray-100"
                         style={{
                           animation: "slideInDown 0.3s ease-out forwards",
-                          animationDelay: `${index * 80}ms`,
+                          animationDelay: `${index * 80}ms`
                         }}
                       >
                         <div className="mt-0.5 shrink-0">{item.icon}</div>
@@ -374,7 +400,7 @@ export default function MobileNavbar() {
                         className="flex -translate-y-2.5 items-start gap-3 rounded-lg px-4 py-3 opacity-0 transition-all duration-200 ease-linear hover:bg-gray-100"
                         style={{
                           animation: "slideInDown 0.3s ease-out forwards",
-                          animationDelay: `${index * 80}ms`,
+                          animationDelay: `${index * 80}ms`
                         }}
                       >
                         <div className="mt-0.5 shrink-0 rounded-lg bg-white p-2 shadow-icon">
@@ -430,7 +456,7 @@ export default function MobileNavbar() {
                         className="flex -translate-y-2.5 items-start gap-3 rounded-lg px-4 py-3 opacity-0 transition-all duration-200 ease-linear hover:bg-gray-100"
                         style={{
                           animation: "slideInDown 0.3s ease-out forwards",
-                          animationDelay: `${index * 80}ms`,
+                          animationDelay: `${index * 80}ms`
                         }}
                       >
                         <div className="mt-0.5 shrink-0">{item.icon}</div>
