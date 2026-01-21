@@ -14,80 +14,80 @@ export interface SocialLinkType extends FooterLinkItemType {
 export const resourceLinks: FooterLinkItemType[] = [
   {
     title: "Update Logs",
-    url: "/docs/changelog",
-    external: false,
+    url: "/changelog",
+    external: false
   },
   {
     title: "Roadmap",
-    url: "/docs/roadmap",
-    external: false,
+    url: "https://staging.tailgrids.com/roadmap",
+    external: false
   },
   {
-    title: "Tailwind UI Components",
-    url: "/components",
-    external: false,
+    title: "Tailgrids Blocks",
+    url: "https://staging.tailgrids.com/blocks",
+    external: false
   },
   {
     title: "Tailwind CSS",
-    url: "https://tailwindcss.com/docs",
-    external: true,
+    url: "https://tailwindcss.com/",
+    external: true
   },
   {
     title: "Tailgrids - Tailwind Figma",
-    url: "https://www.figma.com/community/file/1022464084572022420",
-    external: true,
-  },
+    url: "https://staging.tailgrids.com/figma",
+    external: false
+  }
 ];
 
 export const usefulLinks: FooterLinkItemType[] = [
   {
     title: "License",
-    url: "/license",
-    external: false,
+    url: "https://staging.tailgrids.com/license",
+    external: false
   },
   {
     title: "Privacy Policy",
-    url: "/privacy",
-    external: false,
+    url: "https://staging.tailgrids.com/privacy",
+    external: true
   },
   {
     title: "Refund Policy",
-    url: "/refund",
-    external: false,
+    url: "https://staging.tailgrids.com/refund",
+    external: true
   },
   {
-    title: "Free Download",
-    url: "/download",
-    external: false,
+    title: "Download",
+    url: "https://staging.tailgrids.com/pricing",
+    external: false
   },
   {
     title: "NPM Package",
     url: "https://www.npmjs.com/package/tailgrids",
-    external: true,
-  },
+    external: true
+  }
 ];
 
 export const helpAndSupportLinks: FooterLinkItemType[] = [
   {
     title: "Support",
     url: "/support",
-    external: false,
+    external: false
   },
   {
     title: "Docs",
     url: "/docs",
-    external: false,
+    external: false
   },
   {
     title: "FAQs",
-    url: "/pricing#faqs",
-    external: false,
+    url: "https://staging.tailgrids.com/pricing#faqs",
+    external: false
   },
   {
     title: "Community",
-    url: "/community",
-    external: false,
-  },
+    url: "https://pimjo.com/community",
+    external: true
+  }
 ];
 
 export const socialsLinks: SocialLinkType[] = [
@@ -95,18 +95,18 @@ export const socialsLinks: SocialLinkType[] = [
     title: "X",
     url: "https://x.com/tailgrids",
     external: true,
-    icon: <XIcon className="size-4.5" />,
+    icon: <XIcon className="size-4.5" />
   },
   {
     title: "Github",
     url: "https://github.com/TailGrids",
     external: true,
-    icon: <GithubIcon className="size-4.5" />,
+    icon: <GithubIcon className="size-4.5" />
   },
   {
     title: "Discord",
     url: "https://www.discord.com/",
     external: true,
-    icon: <DiscordIcon className="size-4.5" />,
-  },
+    icon: <DiscordIcon className="size-4.5" />
+  }
 ];
