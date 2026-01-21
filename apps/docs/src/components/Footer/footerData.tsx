@@ -15,79 +15,74 @@ export const resourceLinks: FooterLinkItemType[] = [
   {
     title: "Update Logs",
     url: "/docs/changelog",
-    external: false,
+    external: false
   },
   {
     title: "Roadmap",
     url: "/docs/roadmap",
-    external: false,
+    external: false
   },
   {
     title: "Tailwind UI Components",
     url: "/components",
-    external: false,
+    external: false
   },
   {
     title: "Tailwind CSS",
     url: "https://tailwindcss.com/docs",
-    external: true,
+    external: true
   },
   {
     title: "Tailgrids - Tailwind Figma",
     url: "https://www.figma.com/community/file/1022464084572022420",
-    external: true,
-  },
+    external: true
+  }
 ];
 
 export const usefulLinks: FooterLinkItemType[] = [
   {
     title: "License",
     url: "/license",
-    external: false,
+    external: false
   },
   {
     title: "Privacy Policy",
-    url: "/privacy",
-    external: false,
+    url: "/privacy-policy",
+    external: false
   },
   {
     title: "Refund Policy",
-    url: "/refund",
-    external: false,
+    url: "/refund-policy",
+    external: false
   },
   {
     title: "Free Download",
     url: "/download",
-    external: false,
-  },
-  {
-    title: "NPM Package",
-    url: "https://www.npmjs.com/package/tailgrids",
-    external: true,
-  },
+    external: false
+  }
 ];
 
 export const helpAndSupportLinks: FooterLinkItemType[] = [
   {
     title: "Support",
     url: "/support",
-    external: false,
+    external: false
   },
   {
     title: "Docs",
     url: "/docs",
-    external: false,
+    external: false
   },
   {
     title: "FAQs",
     url: "/pricing#faqs",
-    external: false,
+    external: false
   },
   {
     title: "Community",
     url: "/community",
-    external: false,
-  },
+    external: false
+  }
 ];
 
 export const socialsLinks: SocialLinkType[] = [
@@ -95,18 +90,18 @@ export const socialsLinks: SocialLinkType[] = [
     title: "X",
     url: "https://x.com/tailgrids",
     external: true,
-    icon: <XIcon className="size-4.5" />,
+    icon: <XIcon className="size-4.5" />
   },
   {
     title: "Github",
     url: "https://github.com/TailGrids",
     external: true,
-    icon: <GithubIcon className="size-4.5" />,
+    icon: <GithubIcon className="size-4.5" />
   },
   {
     title: "Discord",
     url: "https://www.discord.com/",
     external: true,
-    icon: <DiscordIcon className="size-4.5" />,
-  },
+    icon: <DiscordIcon className="size-4.5" />
+  }
 ];
