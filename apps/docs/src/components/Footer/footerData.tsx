@@ -13,7 +13,7 @@ export interface SocialLinkType extends FooterLinkItemType {
 
 export const resourceLinks: FooterLinkItemType[] = [
   {
-    title: "Update Logs",
+    title: "Change Logs",
     url: "/changelog",
     external: false
   },
