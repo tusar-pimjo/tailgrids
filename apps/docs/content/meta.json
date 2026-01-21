@@ -1,4 +1,10 @@
 {
   "title": "Documentation",
-  "pages": ["get-started", "components", "license", "[Changelog](/changelog)"]
+  "pages": [
+    "get-started",
+    "components",
+    "license",
+    "[Changelog](/changelog)",
+    "[Credits](/credits)"
+  ]
 }
