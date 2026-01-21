@@ -1,7 +1,8 @@
-import { BlocksIcon, ComponentsIcon, FigmaIcon, TemplateIcon } from "@/icons";
-import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 import ProBadge from "@/components/pro-badge";
 import ThemeToggleLink from "@/components/theme-toggle-link";
+import { BlocksIcon, ComponentsIcon, FigmaIcon, TemplateIcon } from "@/icons";
+import { Home } from "@tailgrids/icons";
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
 export function baseOptions(): BaseLayoutProps {
   return {
@@ -10,8 +11,13 @@ export function baseOptions(): BaseLayoutProps {
     },
     links: [
       {
-        text: "Base Components",
+        text: "Introduction",
         url: "/",
+        icon: <Home className="size-6 shrink-0" />
+      },
+      {
+        text: "Core Components",
+        url: "/components",
         icon: <ComponentsIcon className="size-6 shrink-0 " />,
         active: "nested-url"
       },
@@ -48,8 +54,7 @@ export function baseOptions(): BaseLayoutProps {
         url: "https://staging.tailgrids.com/figma",
         external: false
       }
-    ],
-    children: "WHat the hell?"
+    ]
   };
 }
 

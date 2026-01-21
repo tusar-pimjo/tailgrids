@@ -42,28 +42,23 @@ export const resourceLinks: FooterLinkItemType[] = [
 export const usefulLinks: FooterLinkItemType[] = [
   {
     title: "License",
-    url: "https://staging.tailgrids.com/license",
+    url: "/license",
     external: false
   },
   {
     title: "Privacy Policy",
-    url: "https://staging.tailgrids.com/privacy",
+    url: "https://staging.tailgrids.com/privacy-policy",
     external: true
   },
   {
     title: "Refund Policy",
-    url: "https://staging.tailgrids.com/refund",
+    url: "https://staging.tailgrids.com/refund-policy",
     external: true
   },
   {
     title: "Download",
     url: "https://staging.tailgrids.com/pricing",
     external: false
-  },
-  {
-    title: "NPM Package",
-    url: "https://www.npmjs.com/package/@tailgrids/cli",
-    external: true
   }
 ];
 

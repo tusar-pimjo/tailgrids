@@ -1,7 +1,7 @@
+import GlobalHeader from "@/components/global-header";
+import { baseOptions, ThemeToggleLink } from "@/lib/layout.shared";
 import { source } from "@/lib/source";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
-import { baseOptions, ThemeToggleLink } from "@/lib/layout.shared";
-import GlobalHeader from "@/components/global-header";
 
 import { ContainerWithGrid } from "@/components/ContainerGrid";
 import Footer from "@/components/Footer";
