@@ -62,7 +62,7 @@ export const usefulLinks: FooterLinkItemType[] = [
   },
   {
     title: "NPM Package",
-    url: "https://www.npmjs.com/package/tailgrids",
+    url: "https://www.npmjs.com/package/@tailgrids/cli",
     external: true
   }
 ];
