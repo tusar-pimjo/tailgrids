@@ -1,7 +1,7 @@
-import Image from "next/image";
-import SocialLinks from "./SocialLinks";
 import LogoDarkMode from "@/assets/logo/dark-mode.svg";
 import LogoLightMode from "@/assets/logo/light-mode.svg";
+import Image from "next/image";
+import SocialLinks from "./SocialLinks";
 
 export default function FooterAbout() {
   return (
@@ -23,9 +23,8 @@ export default function FooterAbout() {
         />
       </div>
       <div className="mb-6 max-w-[438px] text-start text-base leading-6 text-gray-500 dark:text-gray-400 md:mb-12">
-        Browse and effortlessly copy-paste from over 800+ components and
-        templates to craft high-quality, custom Tailwind CSS websites without
-        coding.
+        An open-source React UI component library built with Tailwind CSS,
+        including UI blocks and pre-built templates for modern web apps.
       </div>
       {/* social buttons section */}
       <SocialLinks />
