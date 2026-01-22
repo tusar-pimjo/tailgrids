@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     default: "Tailgrids Docs"
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     nocache: true
   }
 };
