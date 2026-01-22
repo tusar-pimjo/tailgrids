@@ -9,7 +9,7 @@ export function ComponentsList() {
       {REGISTRIES.map(component => (
         <Link
           key={component.id}
-          href={`/docs/components/${component.id}`}
+          href={`/components/${component.id}`}
           className="text-base font-medium transition-colors hover:text-primary-600 hover:underline dark:hover:text-primary-400 no-underline max-w-fit decoration-primary-600 dark:decoration-primary-400"
         >
           {component.name}
