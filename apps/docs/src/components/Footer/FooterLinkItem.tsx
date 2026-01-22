@@ -11,7 +11,7 @@ export default function FooterLinkItem({ link }: FooterLinkItemProps) {
       href={link.url}
       target={link.external ? "_blank" : "_self"}
       rel={link.external ? "noopener noreferrer" : undefined}
-      className="inline-flex cursor-pointer text-base text-tg-text-color dark:text-gray-400 duration-200 hover:text-tg-title-color"
+      className="inline-flex cursor-pointer text-base text-tg-text-color dark:text-gray-400 duration-200 hover:text-primary-500"
     >
       {link.title}
     </Link>
