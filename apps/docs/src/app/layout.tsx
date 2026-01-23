@@ -1,8 +1,7 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import { RootProvider } from "fumadocs-ui/provider/next";
-//@ts-ignore
 import type { Metadata } from "next";
 import { DM_Sans, Geist_Mono } from "next/font/google";
-//@ts-ignore
 import "./global.css";
 
 const dmSans = DM_Sans({
@@ -45,6 +44,16 @@ export default function Layout({ children }: LayoutProps<"/">) {
       className={`${dmSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          src="https://accounts.google.com/gsi/client"
+          async
+          defer
+        ></script>
+      </head>
+
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
+
       <body className="flex flex-col min-h-screen bg-white dark:bg-[#030712] antialiased">
         <RootProvider
           search={{
