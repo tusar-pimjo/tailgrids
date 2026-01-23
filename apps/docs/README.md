@@ -1,10 +1,10 @@
-# TailGrids Documentation
+# Tailgrids Documentation
 
-This is the official documentation for TailGrids, a library of UI components for Tailwind CSS.
+This is the official documentation for Tailgrids, a library of UI components for Tailwind CSS.
 
 ## Overview
 
-This is a [Next.js](https://nextjs.org/) application built with [Fumadocs](https://fumadocs.dev/) to create a powerful and searchable documentation site for TailGrids. The documentation is written in MDX and is located in the `content` directory.
+This is a [Next.js](https://nextjs.org/) application built with [Fumadocs](https://fumadocs.dev/) to create a powerful and searchable documentation site for Tailgrids. The documentation is written in MDX and is located in the `content` directory.
 
 ## Technologies Used
 
@@ -41,7 +41,7 @@ The documentation content is located in the `content` directory. The content is 
 
 The `content` directory is organized into the following sections:
 
-- `components`: Contains the documentation for each TailGrids component.
+- `components`: Contains the documentation for each Tailgrids component.
 - `get-started`: Contains the "Get Started" guides, such as installation and usage instructions.
 
 To add a new documentation page, simply create a new `.mdx` file in the appropriate directory. The file will be automatically picked up by the Fumadocs content pipeline.

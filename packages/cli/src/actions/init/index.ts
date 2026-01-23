@@ -17,7 +17,7 @@ export type Config = {
 
 export async function handleInitCommand() {
   logger.break();
-  logger.title('Welcome to TailGrids CLI!');
+  logger.title('Welcome to Tailgrids CLI!');
   logger.break();
 
   const themes = await getAvailableThemesChoices();

@@ -94,13 +94,13 @@ export const socialsLinks: SocialLinkType[] = [
   },
   {
     title: "Github",
-    url: "https://github.com/TailGrids",
+    url: "https://github.com/Tailgrids",
     external: true,
     icon: <GithubIcon className="size-4.5" />
   },
   {
     title: "Discord",
-    url: "https://www.discord.com/",
+    url: "https://www.pimjo.com/community",
     external: true,
     icon: <DiscordIcon className="size-4.5" />
   }

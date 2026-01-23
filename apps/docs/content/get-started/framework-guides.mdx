@@ -1,17 +1,19 @@
 ---
 title: Framework Guides
-description: Install and configure Tailgrids Components for Vite and NextJs
+description: Install and configure TailGrids components for React-based frameworks
 ---
 
 # Framework Guides
 
-Learn how to integrate TailGrids with your favorite framework.
+This guide shows how to install and use TailGrids with popular React-based frameworks. The steps are organized so each framework follows the same flow: create project, setup Tailwind, run the CLI, add components.
 
-## NextJs
+---
+
+## Next.js
 
 ### Create project
 
-Start by creating a new React project using `NextJs`. Select the **TypeScript + TailwindCSS** template:
+Create a new Next.js project with TypeScript and Tailwind CSS:
 
 ```bash
 npx create-next-app@latest --ts --tailwind --import-alias "@/"
@@ -19,80 +21,82 @@ npx create-next-app@latest --ts --tailwind --import-alias "@/"
 
 ### Run the CLI
 
-Run the `tailgrids/cli` init command to setup your project:
+Initialize TailGrids in your project:
 
 ```bash
 npx @tailgrids/cli init
 ```
 
-You will be asked a few questions to configure `tailgrids.json`.
+You will be prompted to configure `tailgrids.json`:
 
 ```txt
 Which theme would you like to use? › Default
 ```
 
-### Add Components
+### Add components
 
-You can now start adding components to your project.
+Add your first component:
 
 ```bash
 npx @tailgrids/cli add button
 ```
 
-The command above will add the `Button` component to your project. You can then import it like this:
+Import and use it in your app:
 
-```tsx showLineNumbers title="src/App.tsx"
+```tsx title="src/app/page.tsx" showLineNumbers
 import { Button } from "@/components/core/button";
 
-function App() {
+export default function Home() {
 	return (
-		<div className="flex min-h-svh flex-col items-center justify-center">
+		<div className="flex min-h-svh items-center justify-center">
 			<Button>Click me</Button>
 		</div>
 	);
 }
-
-export default App;
 ```
 
-## Vite.js
+---
+
+## React (Vite)
 
 ### Create project
 
-Start by creating a new React project using `vite`. Select the **React + TypeScript** template:
+Create a new React project using Vite with TypeScript:
 
 ```bash
-npm create vite@latest
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm install
 ```
 
 ### Add Tailwind CSS
+
+Install Tailwind and the Vite plugin:
 
 ```bash
 npm install tailwindcss @tailwindcss/vite
 ```
 
-Replace everything in `src/index.css` with the following:
+Replace the contents of `src/index.css`:
 
 ```css title="src/index.css"
 @import "tailwindcss";
 ```
 
-### Edit tsconfig.json file
+Ensure `index.css` is imported in `src/main.tsx`.
 
-The current version of Vite splits TypeScript configuration into three files, two of which need to be edited.
-Add the `baseUrl` and `paths` properties to the `compilerOptions` section of the `tsconfig.json` and
-`tsconfig.app.json` files:
+### Configure path aliases (TypeScript)
 
-```ts title="tsconfig.json" {11-16} showLineNumbers
+Vite uses multiple TypeScript config files. Update **both** files below.
+
+#### tsconfig.json
+
+```json title="tsconfig.json" showLineNumbers
 {
   "files": [],
   "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
     "baseUrl": ".",
@@ -103,40 +107,35 @@ Add the `baseUrl` and `paths` properties to the `compilerOptions` section of the
 }
 ```
 
-### Edit tsconfig.app.json file
+#### tsconfig.app.json
 
-Add the following code to the `tsconfig.app.json` file to resolve paths, for your IDE:
-
-```ts title="tsconfig.app.json" {4-9} showLineNumbers
+```json title="tsconfig.app.json" showLineNumbers
 {
   "compilerOptions": {
-    // ...
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
-    // ...
   }
 }
 ```
 
 ### Update vite.config.ts
 
-Add the following code to the vite.config.ts so your app can resolve paths without error:
+Install Node types (required for path resolution):
 
 ```bash
 npm install -D @types/node
 ```
 
-```typescript title="vite.config.ts" showLineNumbers {1,2,8-13}
+Update `vite.config.ts`:
+
+```ts title="vite.config.ts" showLineNumbers
 import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-// https://vite.dev/config/
 export default defineConfig({
 	plugins: [react(), tailwindcss()],
 	resolve: {
@@ -149,34 +148,30 @@ export default defineConfig({
 
 ### Run the CLI
 
-Run the `tailgrids/cli` init command to setup your project:
+Initialize TailGrids:
 
 ```bash
 npx @tailgrids/cli init
 ```
 
-You will be asked a few questions to configure `tailgrids.json`.
+Select your preferred theme when prompted.
 
-```txt
-Which theme would you like to use? › Default
-```
+### Add components
 
-### Add Components
-
-You can now start adding components to your project.
+Add a component:
 
 ```bash
 npx @tailgrids/cli add button
 ```
 
-The command above will add the `Button` component to your project. You can then import it like this:
+Use it in your app:
 
-```tsx showLineNumbers title="src/App.tsx"
+```tsx title="src/App.tsx" showLineNumbers
 import { Button } from "@/components/core/button";
 
 function App() {
 	return (
-		<div className="flex min-h-svh flex-col items-center justify-center">
+		<div className="flex min-h-svh items-center justify-center">
 			<Button>Click me</Button>
 		</div>
 	);
@@ -184,3 +179,11 @@ function App() {
 
 export default App;
 ```
+
+---
+
+## Notes
+
+* The TailGrids CLI workflow is the same across all React-based frameworks.
+* Path aliases (`@/`) are recommended but optional. If you skip them, update imports accordingly.
+* More framework-specific guides (Astro, TanStack, Remix) can follow the same structure.

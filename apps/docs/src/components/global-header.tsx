@@ -39,14 +39,14 @@ export default function GlobalHeader() {
                 width={150}
                 height={40}
                 className="dark:hidden"
-                alt="TailGrids Logo"
+                alt="Tailgrids Logo"
               />
               <Image
                 src={LogoDarkMode}
                 width={150}
                 height={40}
                 className="not-dark:hidden"
-                alt="TailGrids Logo"
+                alt="Tailgrids Logo"
               />
             </Link>
 
@@ -82,13 +82,16 @@ export default function GlobalHeader() {
             </div>
             <div className="hidden md:flex gap-6">
               <div className="items-center gap-2 flex">
-                <a className="flex size-8 items-center justify-center rounded-[9px] dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none cursor-pointer dark:bg-white/5 dark:border-[#111827] ">
+                <a href="https://x.com/tailgrids"
+                className="flex size-8 items-center justify-center rounded-[9px] dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none cursor-pointer dark:bg-white/5 dark:border-[#111827] ">
                   <XIcon className="size-5 text-gray-400" />
                 </a>
-                <a className="flex size-8 items-center justify-center dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none rounded-[9px] cursor-pointer dark:bg-white/5 dark:border-[#111827]">
+                <a href="https://github.com/tailgrids/tailgrids"
+                className="flex size-8 items-center justify-center dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none rounded-[9px] cursor-pointer dark:bg-white/5 dark:border-[#111827]">
                   <GithubIcon className="size-5 text-gray-400" />
                 </a>
-                <a className="flex size-8 items-center justify-center rounded-[9px] dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none cursor-pointer dark:bg-white/5 dark:border-[#111827]">
+                <a href="https://pimjo.com/community"
+                className="flex size-8 items-center justify-center rounded-[9px] dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none cursor-pointer dark:bg-white/5 dark:border-[#111827]">
                   <DiscordIcon className="size-5 text-gray-400" />
                 </a>
               </div>
@@ -104,7 +107,7 @@ export default function GlobalHeader() {
                   "
                   href="https://tailgrids.com/pricing"
                 >
-                  Pricing & Faq
+                  Pricing & FAQ
                 </a>
               </div>
             </div>

@@ -12,12 +12,12 @@
     "access": "public"
   },
   "author": {
-    "name": "TailGrids",
+    "name": "Tailgrids",
     "url": "https://tailgrids.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TailGrids/oss.git",
+    "url": "git+https://github.com/Tailgrids/oss.git",
     "directory": "/packages/icons"
   },
   "homepage": "https://tailgrids.com",

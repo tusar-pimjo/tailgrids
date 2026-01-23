@@ -10,7 +10,7 @@ process.on('SIGTERM', () => process.exit(0));
 async function main() {
   const program = new Command()
     .name('tailgrids')
-    .description('A CLI tool for managing TailGrids components')
+    .description('A CLI tool for managing Tailgrids components')
     .version('1.0.0');
 
   program.addCommand(initCommand).addCommand(addCommand);

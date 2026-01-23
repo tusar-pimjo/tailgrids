@@ -12,14 +12,14 @@ export default function FooterAbout() {
           width={150}
           height={40}
           className="dark:hidden"
-          alt="TailGrids Logo"
+          alt="Tailgrids Logo"
         />
         <Image
           src={LogoDarkMode}
           width={150}
           height={40}
           className="not-dark:hidden"
-          alt="TailGrids Logo"
+          alt="Tailgrids Logo"
         />
       </div>
       <div className="mb-6 max-w-[438px] text-start text-base leading-6 text-gray-500 dark:text-gray-400 md:mb-12">

@@ -1,6 +1,6 @@
 import ProBadge from "@/components/pro-badge";
 import ThemeToggleLink from "@/components/theme-toggle-link";
-import { BlocksIcon, ComponentsIcon, FigmaIcon, TemplateIcon } from "@/icons";
+import { BlocksIcon, ComponentsIcon, FigmaIcon, TemplateIcon, BookOpenIcon } from "@/icons";
 import { Home } from "@tailgrids/icons";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
@@ -14,6 +14,12 @@ export function baseOptions(): BaseLayoutProps {
         text: "Introduction",
         url: "/",
         icon: <Home className="size-6 shrink-0" />
+      },
+      {
+        text: "Installation",
+        url: "/installation",
+        icon: <BookOpenIcon className="size-6 shrink-0 " />,
+        active: "nested-url"
       },
       {
         text: "Core Components",

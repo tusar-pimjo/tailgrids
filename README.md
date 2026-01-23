@@ -10,7 +10,7 @@ Build human-centered websites, dashboards, SaaS products, landing pages, and int
 
 ### ✨ Feature Highlights
 
-TailGrids is built for real-world production. Every component follows modern UI patterns, feels natural to use, and works seamlessly with React and Tailwind CSS.
+Tailgrids is built for real-world production. Every component follows modern UI patterns, feels natural to use, and works seamlessly with React and Tailwind CSS.
 
 * **High-quality premium design** – Clean, modern, and carefully crafted components that look polished out of the box
 * **500+ free and essential UI components** – Buttons, forms, navbars, footers, cards, modals, alerts, dropdowns, and more
@@ -63,10 +63,10 @@ Ready-to-use templates that combine components and blocks into complete pages an
 
 ## 🧠 Built for Developers and Designers
 
-TailGrids is built for real production teams - developers and designers alike.
+Tailgrids is built for real production teams - developers and designers alike.
 It ships with a **detailed, enterprise-ready Figma design system that designers genuinely enjoy** working with.
 
-For developers, TailGrids focuses on long-term maintainability and a great DX:
+For developers, Tailgrids focuses on long-term maintainability and a great DX:
 
 * Clean, readable React components
 * Utility-first styling with Tailwind CSS
@@ -102,7 +102,7 @@ Accessibility is not an afterthought.
 
 ## 📦 Installation
 
-Set up TailGrids in your React project in a few minutes.
+Set up Tailgrids in your React project in a few minutes.
 
 #### Install & Initialize
 
@@ -112,7 +112,7 @@ Run this in your project root:
 npx @tailgrids/cli@latest init
 ```
 
-This sets up TailGrids, creates the config and base styles, and installs required dependencies.
+This sets up Tailgrids, creates the config and base styles, and installs required dependencies.
 
 ---
 
@@ -139,7 +139,7 @@ Import and use the component:
 import { Button } from "@/components/core/button";
 
 export default function Home() {
-  return <Button variant="primary">Hello TailGrids!</Button>;
+  return <Button variant="primary">Hello Tailgrids!</Button>;
 }
 ```
 ---

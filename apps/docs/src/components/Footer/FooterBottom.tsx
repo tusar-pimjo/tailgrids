@@ -12,7 +12,7 @@ export default function FooterBottom() {
         </p>
         <p className="mt-2 text-sm -tracking-[0.2px] text-tg-text-color-secondary dark:text-gray-400">
           The Tailwind name and logos are trademarks of Tailwind Labs Inc.
-          TailGrids is not affiliated with, associated with, or part of Tailwind
+          Tailgrids is not affiliated with, associated with, or part of Tailwind
           Labs or the official Tailwind CSS.
         </p>
       </div>

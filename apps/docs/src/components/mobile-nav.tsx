@@ -49,31 +49,31 @@ const mobileMenuData: MenuItem[] = [
       },
       {
         title: "Application",
-        path: "https://tailgrids.com/blocks/application",
+        path: "https://tailgrids.com/blocks/#application",
         icon: <Layout14 className="size-5" />,
         external: true
       },
       {
         title: "Marketing",
-        path: "https://tailgrids.com/blocks/marketing",
+        path: "https://tailgrids.com/blocks/#marketing",
         icon: <Megaphone1 className="size-5" />,
         external: true
       },
       {
         title: "Dashboard",
-        path: "https://tailgrids.com/blocks/dashboard",
+        path: "https://tailgrids.com/blocks/#dashboard",
         icon: <PieChart1 className="size-5" />,
         external: true
       },
       {
         title: "E-commerce",
-        path: "https://tailgrids.com/blocks/e-commerce",
+        path: "https://tailgrids.com/blocks/#e-commerce",
         icon: <Cart2 className="size-5" />,
         external: true
       },
       {
         title: "AI Components",
-        path: "https://tailgrids.com/blocks/ai-components",
+        path: "https://tailgrids.com/blocks/#ai-components",
         icon: <Sparkle className="size-5" />,
         external: true
       }
