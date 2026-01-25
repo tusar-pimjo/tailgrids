@@ -44,7 +44,10 @@ export default function Layout({ children }: LayoutProps<"/">) {
       className={`${dmSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
-      <script src="https://accounts.google.com/gsi/client" async defer />
+      <head>
+        <script src="https://accounts.google.com/gsi/client" async defer />
+      </head>
+
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
 
       <body className="flex flex-col min-h-screen bg-white dark:bg-[#030712] antialiased">
