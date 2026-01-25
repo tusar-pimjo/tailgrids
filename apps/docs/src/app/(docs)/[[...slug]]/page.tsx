@@ -41,11 +41,18 @@ export async function generateMetadata(
 
   if (!page) notFound();
 
+  const canonical = params.slug?.length
+    ? "/docs/" + params.slug.join("/")
+    : "/docs";
+
   return {
     title: page.data.title,
     description: page.data.description,
     openGraph: {
       images: getPageImage(page).url
+    },
+    alternates: {
+      canonical
     }
   };
 }

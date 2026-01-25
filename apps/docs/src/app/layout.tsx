@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     default: "Tailgrids Docs"
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     nocache: true
   }
 };
@@ -44,14 +44,7 @@ export default function Layout({ children }: LayoutProps<"/">) {
       className={`${dmSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <script
-          src="https://accounts.google.com/gsi/client"
-          async
-          defer
-        ></script>
-      </head>
-
+      <script src="https://accounts.google.com/gsi/client" async defer />
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
 
       <body className="flex flex-col min-h-screen bg-white dark:bg-[#030712] antialiased">
