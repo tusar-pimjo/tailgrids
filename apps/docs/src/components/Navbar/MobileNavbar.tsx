@@ -368,7 +368,7 @@ export default function MobileNavbar() {
               <div className="my-3 border-t border-dashed border-gray-300"></div>
 
               {/* Products Dropdown */}
-              <div>
+              {/* <div>
                 <button
                   onClick={() => toggleMenu("products")}
                   className="flex w-full items-center justify-between rounded-lg px-4 py-3 font-medium text-gray-700 transition-all duration-200 ease-linear hover:bg-gray-100"
@@ -418,7 +418,7 @@ export default function MobileNavbar() {
                     ))}
                   </div>
                 )}
-              </div>
+              </div> */}
 
               {/* Divider */}
               <div className="my-3 border-t border-dashed border-gray-300"></div>

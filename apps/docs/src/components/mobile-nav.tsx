@@ -39,45 +39,14 @@ interface MenuItem {
 
 const mobileMenuData: MenuItem[] = [
   {
+    title: "Components",
+    path: "https://tailgrids.com/components",
+    external: true
+  },
+  {
     title: "Blocks",
-    children: [
-      {
-        title: "Core Components",
-        path: "/docs",
-        icon: <DashboardSquare1 className="size-5" />,
-        external: false
-      },
-      {
-        title: "Application",
-        path: "https://tailgrids.com/blocks/#application",
-        icon: <Layout14 className="size-5" />,
-        external: true
-      },
-      {
-        title: "Marketing",
-        path: "https://tailgrids.com/blocks/#marketing",
-        icon: <Megaphone1 className="size-5" />,
-        external: true
-      },
-      {
-        title: "Dashboard",
-        path: "https://tailgrids.com/blocks/#dashboard",
-        icon: <PieChart1 className="size-5" />,
-        external: true
-      },
-      {
-        title: "E-commerce",
-        path: "https://tailgrids.com/blocks/#e-commerce",
-        icon: <Cart2 className="size-5" />,
-        external: true
-      },
-      {
-        title: "AI Components",
-        path: "https://tailgrids.com/blocks/#ai-components",
-        icon: <Sparkle className="size-5" />,
-        external: true
-      }
-    ]
+    path: "https://tailgrids.com/blocks",
+    external: true
   },
   {
     title: "Templates",
@@ -85,34 +54,17 @@ const mobileMenuData: MenuItem[] = [
     external: true
   },
   {
-    title: "Products",
-    children: [
-      {
-        title: "Tailgrids React",
-        path: "https://tailgrids.com/react",
-        icon: <ColoredReactIcon className="size-5" />,
-        external: true
-      },
-      {
-        title: "Tailgrids Vue",
-        path: "https://tailgrids.com/vue",
-        icon: <ColoredVueIcon className="size-5" />,
-        external: true
-      },
-      {
-        title: "Tailgrids Figma",
-        path: "https://tailgrids.com/figma",
-        icon: <ColoredFigmaIcon className="size-5" />,
-        external: true
-      }
-    ]
+    title: "Figma",
+    path: "https://tailgrids.com/figma",
+    external: true
   },
+
   {
     title: "Resources",
     children: [
       {
         title: "Community",
-        path: "https://tailgrids.com/community",
+        path: "https://pimjo.com/community",
         icon: <CommunityIcon className="size-5" />,
         external: true
       },

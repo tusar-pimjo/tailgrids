@@ -222,12 +222,13 @@ a > svg {
 .dark .text-fd-muted-foreground:hover {
   color: #5e84fc !important; /* primary-400 */
 }
-#nd-sidebar div a,
+
 #nd-sidebar div button {
-  font-size: 16px;
+  /* font-size: 16px; */
   color: #374151;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
+
 .text-fd-primary::before {
   background-color: #3758f9 !important; /* primary-500 */
 }

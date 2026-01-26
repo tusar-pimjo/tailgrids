@@ -112,11 +112,7 @@ const menuData: MenuItem[] = [
     path: "https://tailgrids.com/figma",
     external: false
   },
-  {
-    title: "Templates",
-    path: "https://tailgrids.com/figma",
-    external: false
-  },
+
   // Products dropdown - reserved for future use
   // {
   //   title: "Products",
