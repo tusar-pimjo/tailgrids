@@ -61,7 +61,7 @@ export default function GlobalHeader() {
             <div className="flex gap-3 items-center">
               <button
                 onClick={() => setOpenSearch(true)}
-                className="hidden lg:flex h-11 w-[260px] xl:w-[250px]  dark:bg-white/5 items-center gap-3 rounded-xl border border-gray-200 bg-white px-3 text-gray-400 dark:border-[#111827] transition"
+                className="hidden 2xl:flex h-11 2xl:w-[260px]  dark:bg-white/5 items-center gap-3 rounded-xl border border-gray-200 bg-white px-3 text-gray-400 dark:border-[#111827] transition"
               >
                 <SearchIcon className="size-5" />
                 <span className="hidden xl:flex text-sm flex-1">
@@ -70,6 +70,13 @@ export default function GlobalHeader() {
                 <span className="hidden xl:flex h-6.5 w-10 items-center dark:border-[#111827] justify-center rounded-lg border border-gray-100 text-xs">
                   ⌘ K
                 </span>
+              </button>
+
+              <button
+                onClick={() => setOpenSearch(true)}
+                className="2xl:hidden text-gray-700 dark:text-gray-300 hover:text-primary-500"
+              >
+                <SearchIcon className="size-6" />
               </button>
               {/* Theme Toggle */}
               <button
@@ -80,22 +87,28 @@ export default function GlobalHeader() {
                 <MoonIcon className="hidden dark:block text-gray-400" />
               </button>
             </div>
-            <div className="hidden md:flex gap-6">
+            <div className="hidden md:flex gap-4">
               <div className="items-center gap-2 flex">
-                <a href="https://x.com/tailgrids"
-                className="flex size-8 items-center justify-center rounded-[9px] dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none cursor-pointer dark:bg-white/5 dark:border-[#111827] ">
+                <a
+                  href="https://x.com/tailgrids"
+                  className="flex size-8 items-center justify-center rounded-[9px] dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none cursor-pointer dark:bg-white/5 dark:border-[#111827] "
+                >
                   <XIcon className="size-5 text-gray-400" />
                 </a>
-                <a href="https://github.com/tailgrids/tailgrids"
-                className="flex size-8 items-center justify-center dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none rounded-[9px] cursor-pointer dark:bg-white/5 dark:border-[#111827]">
+                <a
+                  href="https://github.com/tailgrids/tailgrids"
+                  className="flex size-8 items-center justify-center dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none rounded-[9px] cursor-pointer dark:bg-white/5 dark:border-[#111827]"
+                >
                   <GithubIcon className="size-5 text-gray-400" />
                 </a>
-                <a href="https://pimjo.com/community"
-                className="flex size-8 items-center justify-center rounded-[9px] dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none cursor-pointer dark:bg-white/5 dark:border-[#111827]">
+                <a
+                  href="https://pimjo.com/community"
+                  className="flex size-8 items-center justify-center rounded-[9px] dark:shadow-none shadow-navbar-icon dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow-none cursor-pointer dark:bg-white/5 dark:border-[#111827]"
+                >
                   <DiscordIcon className="size-5 text-gray-400" />
                 </a>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-4">
                 <a
                   href="https://tailgrids.com/signin"
                   className="text-gray-700 dark:text-gray-400 font-medium text-base hover:text-tg-text-color-secondary"
@@ -103,7 +116,7 @@ export default function GlobalHeader() {
                   Account
                 </a>
                 <a
-                  className="custom-link-btn-blue ml-4
+                  className="custom-link-btn-blue 
                   "
                   href="https://tailgrids.com/pricing"
                 >
@@ -115,7 +128,7 @@ export default function GlobalHeader() {
             {/* Mobile Search Button */}
             <button
               onClick={() => setOpenSearch(true)}
-              className="lg:hidden text-gray-700 dark:text-gray-300 hover:text-primary-500"
+              className="hidden text-gray-700 dark:text-gray-300 hover:text-primary-500"
             >
               <SearchIcon className="size-6" />
             </button>
