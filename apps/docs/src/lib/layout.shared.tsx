@@ -19,12 +19,12 @@ export function baseOptions(): BaseLayoutProps {
       {
         text: "Introduction",
         url: "/",
-        icon: <BoltIcon className="shrink-0" />
+        icon: <OpenBook className="shrink-0" />
       },
       {
         text: "Installation",
         url: "/installation",
-        icon: <OpenBook className="shrink-0" />,
+        icon: <BoltIcon className="shrink-0" />,
         active: "nested-url"
       },
       {

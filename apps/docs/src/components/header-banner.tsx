@@ -1,5 +1,7 @@
 import Glow from "@/assets/glow.png";
+import GlowDark from "@/assets/glow-dark.png";
 import LogoBanner from "@/assets/logo/banner.png";
+import LogoBannerDark from "@/assets/logo/banner-dark.png";
 import Image from "next/image";
 
 export default function HeaderBanner() {
@@ -11,16 +13,26 @@ export default function HeaderBanner() {
         role="presentation"
         width={100}
         height={0}
-        className="w-full h-full rounded-r-3xl absolute top-0 right-0 m-0!"
+        className="w-full h-full rounded-r-3xl block dark:hidden absolute top-0 right-0 m-0!"
       />
-      <div className="absolute top-0 right-0">
+      <Image
+        src={GlowDark}
+        alt="Gradient Glow"
+        role="presentation"
+        width={100}
+        height={0}
+        className="w-full h-full rounded-r-3xl hidden dark:block absolute top-0 right-0 m-0!"
+      />
+      <div className="absolute right-0 top-1/2 -translate-y-1/2">
         <Image
           src={LogoBanner}
           alt="Logo Banner"
-          width={100}
-          height={0}
-          sizes="100vw"
-          className="w-full h-auto m-0!"
+          className="lg:block dark:hidden hidden "
+        />
+        <Image
+          src={LogoBannerDark}
+          alt="Logo Banner"
+          className="hidden lg:dark:block "
         />
       </div>
       <div className="px-8 py-7  relative z-20">

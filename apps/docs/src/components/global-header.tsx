@@ -81,7 +81,7 @@ export default function GlobalHeader() {
               {/* Theme Toggle */}
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="hidden lg:flex size-10 shrink-0 items-center cursor-pointer justify-center dark:shadow-none dark:border-[#111827] dark:bg-white/5 rounded-xl shadow-navbar-icon  transition"
+                className="hidden sm:flex size-10 shrink-0 items-center cursor-pointer justify-center dark:shadow-none dark:border-[#111827] dark:bg-white/5 rounded-xl shadow-navbar-icon  transition"
               >
                 <SunIcon className="block dark:hidden text-gray-500" />
                 <MoonIcon className="hidden dark:block text-gray-400" />
