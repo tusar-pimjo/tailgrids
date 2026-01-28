@@ -5,9 +5,9 @@ export default function BreadcrumbsWithIconPreview() {
   return (
     <Breadcrumbs
       items={[
-        { href: "/", label: "Home", icon: <Home /> },
-        { href: "/products", label: "Products", icon: <ThreeDCube1 /> },
-        { href: "/products/laptop", label: "Laptop" }
+        { href: "#", label: "Home", icon: <Home /> },
+        { href: "#", label: "Products", icon: <ThreeDCube1 /> },
+        { href: "#", label: "Laptop" }
       ]}
     />
   );
