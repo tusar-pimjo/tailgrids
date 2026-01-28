@@ -3,9 +3,15 @@ title: React Button Component
 description: A React button component that lets users trigger actions and events. Used for clicks, form actions, and user interactions with multiple styles and sizes.
 ---
 
+import ButtonAppearancesPreview from "@/components/preview/button/button-appearances-preview";
+import ButtonCustomPreview from "@/components/preview/button/button-custom-preview";
+import ButtonDisabledPreview from "@/components/preview/button/button-disabled-preview";
+import ButtonPreview from "@/components/preview/button/button-preview";
+import ButtonSizesPreview from "@/components/preview/button/button-sizes-preview";
+import ButtonVariantsPreview from "@/components/preview/button/button-variants-preview";
+import ButtonWithIconPreview from "@/components/preview/button/button-with-icon-preview";
 import { getFileContent } from "@/utils/get-file-content";
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
-import ButtonPreview from "@/components/preview/button-preview";
 
 # Button
 
@@ -14,14 +20,16 @@ React Button components are used to trigger actions such as submitting forms, op
 This Button component is built with React and styled using Tailwind CSS, giving developers control over appearance, size, and interaction states.
 
 <ComponentPreview
-  codeSnippet={getFileContent("/src/components/preview/button-preview.tsx")}
+  codeSnippet={getFileContent(
+    "/src/components/preview/button/button-preview.tsx"
+  )}
 >
   <ButtonPreview />
 </ComponentPreview>
 
 ## Installation
 
-<Accordions>
+<Accordions defaultValue="CLI">
 <Accordion title="CLI">
 Install the component using the Tailgrids CLI.
 
@@ -48,6 +56,7 @@ Copy and paste the following component code into your project.
 </Accordions>
 
 ## Usage
+
 Import the component and pass the required props.
 
 ```tsx
@@ -59,63 +68,89 @@ export default () => <Button variant="primary">Click me</Button>;
 ## Examples
 
 ### Variants
+
 Use variants to indicate the purpose of an action.
 
-```tsx
-<Button variant="primary">Primary</Button>
-<Button variant="danger">Danger</Button>
-<Button variant="success">Success</Button>
-<Button variant="ghost">Ghost</Button>
-```
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/button/button-variants-preview.tsx"
+  )}
+>
+  <ButtonVariantsPreview />
+</ComponentPreview>
+
+Note: Ghost variant automatically adjusts focus ring size to `ring-2` for subtler appearance.
 
 ### Appearances
+
 Use appearances to control the visual style.
 
-```tsx
-<Button appearance="fill">Filled</Button>
-<Button appearance="outline">Outline</Button>
-```
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/button/button-appearances-preview.tsx"
+  )}
+>
+  <ButtonAppearancesPreview />
+</ComponentPreview>
 
 ### Sizes
+
 Choose a size that fits the surrounding UI.
 
-```tsx
-<Button size="xs">Extra Small</Button>
-<Button size="sm">Small</Button>
-<Button size="md">Medium</Button>
-<Button size="lg">Large</Button>
-```
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/button/button-sizes-preview.tsx"
+  )}
+>
+  <ButtonSizesPreview />
+</ComponentPreview>
 
 ### With Icons
 
-Icons are automatically adjusted based on the `size` and `variant` props
+Icons are automatically adjusted based on the `size` and `variant` props.
 
-```tsx
-import { PlusAdd, Download } from "@tailgrids/icons";
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/button/button-with-icon-preview.tsx"
+  )}
+>
+  <ButtonWithIconPreview />
+</ComponentPreview>
 
-<Button>
-  <PlusAdd />
-  Add Item
-</Button>
-
-<Button iconOnly>
-  <Download />
-</Button>
-```
+Note: The `iconOnly` prop adjusts padding to create square buttons for icon-only usage.
 
 ### Disabled
+
 Use the disabled state to prevent interaction.
 
-```tsx
-<Button disabled>Disabled Button</Button>
-```
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/button/button-disabled-preview.tsx"
+  )}
+>
+  <ButtonDisabledPreview />
+</ComponentPreview>
+
+Note: Disabled buttons have `pointer-events-none` to prevent interaction.
+
+### Custom
+
+You can use `className` to add custom styles or create custom states like loading.
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/button/button-custom-preview.tsx"
+  )}
+>
+  <ButtonCustomPreview />
+</ComponentPreview>
 
 ## API Reference
 
 Extends `button` element props.
 
 | Prop         | Type                                            | Default     | Description                      |
-| ------------ | ----------------------------------------------- | ----------- | -------------------------------- |
+| :----------- | :---------------------------------------------- | :---------- | :------------------------------- |
 | `variant`    | `'primary'`, `'danger'`, `'success'`, `'ghost'` | `'primary'` | Visual style variant             |
 | `appearance` | `'fill'`, `'outline'`                           | `'fill'`    | Filled or outlined style         |
 | `size`       | `'xs'`, `'sm'`, `'md'`, `'lg'`                  | `'md'`      | Button size                      |
@@ -131,10 +166,3 @@ Extends `button` element props.
 - Disabled state removes pointer events and applies appropriate visual styling
 - Icons inherit text color for consistent styling
 - All standard button HTML attributes are supported
-
-## Notes
-
-- Icons are automatically adjusted based on the `size` and `variant` props
-- The `iconOnly` prop adjusts padding to create square buttons for icon-only usage
-- Ghost variant automatically adjusts focus ring size to `ring-2` for subtler appearance
-- Disabled buttons have `pointer-events-none` to prevent interaction
