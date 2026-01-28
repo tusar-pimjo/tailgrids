@@ -8,18 +8,62 @@ Build human-centered websites, dashboards, SaaS products, landing pages, and int
 
 ---
 
+## 📦 Installation
+
+Set up Tailgrids in your React project in a few minutes.
+
+#### Install & Initialize
+
+Run this in your project root:
+
+```bash
+npx @tailgrids/cli@latest init
+```
+
+This sets up Tailgrids, creates the config and base styles, and installs required dependencies.
+
+#### Add Styles
+
+Copy the contents of `tailgrids.css` into your main CSS file, like `globals.css` or `app.css`.
+
+---
+
+#### Add a Component
+
+Add components using the CLI:
+
+```bash
+npx @tailgrids/cli@latest add button
+```
+---
+
+#### Use It
+
+Import and use the component:
+
+```jsx
+import { Button } from "@/components/core/button";
+
+export default function Home() {
+  return <Button variant="primary">Hello Tailgrids!</Button>;
+}
+```
+
+---
+
 ### ✨ Feature Highlights
 
 Tailgrids is built for real-world production. Every component follows modern UI patterns, feels natural to use, and works seamlessly with React and Tailwind CSS.
 
 * **High-quality premium design** – Clean, modern, and carefully crafted components that look polished out of the box
-* **500+ free and essential UI components** – Buttons, forms, navbars, footers, cards, modals, alerts, dropdowns, and more
+* **100+ Essential free UI Components** – Buttons, forms, navbars, footers, cards, modals, alerts, dropdowns, and more
+* **Premium UI Blocks** – 500+ React UI blocks and components for applications, dashboards, e-commerce, and AI products
 * **React + TypeScript first-class support** – Fully rebuilt with JSX/TSX in V3
 * **Powered by Tailwind CSS** – Full control and easy customization with utility classes
 * **Production-ready** – Optimized for performance, accessibility (a11y), dark mode, and responsiveness
-* **New in V3** – CLI for instant component installation (`npx tailgrids add button`)
+* **Tailgrids CLI** – CLI for instant component installation (`npx tailgrids add button`)
 * Modern **design tokens** with a flexible theme system
-* Built-in support for **Next.js**, Storybook, ESLint, Prettier, and Playwright
+* Built-in support for - **React, Next.js** and all popular React-based frameworks
 * Unified free + pro ecosystem with a consistent design language
 * Beautiful **open-source SVG icon** library included
 ---
@@ -29,14 +73,14 @@ Tailgrids is built for real-world production. Every component follows modern UI 
 * **Website** – [https://tailgrids.com](https://tailgrids.com)
 * **Documentation** – [https://tailgrids.com/docs](https://tailgrids.com/docs)
 * **Components** – [https://tailgrids.com/docs/components](https://tailgrids.com/docs/components)
+* **Blocks** – [https://tailgrids.com/blocks](https://tailgrids.com/blocks)
 * **Templates** – [https://tailgrids.com/templates](https://tailgrids.com/templates)
 * **Changelog & Updates** – [https://tailgrids.com/blog](https://tailgrids.com/blog)
-* **GitHub Issues** – Use this repo to report bugs or request features
 
 ## ✨ What’s Included
 
 ### React UI Components
-A growing collection of reusable React components covering common UI needs:
+A growing collection of reusable React components covering all common UI needs:
 
 - Buttons, badges, alerts  
 - Forms, inputs, checkboxes, radios  
@@ -49,15 +93,16 @@ A growing collection of reusable React components covering common UI needs:
 ### UI Blocks
 Prebuilt UI blocks to speed up development:
 
-- Hero sections  
-- Feature sections  
-- Call-to-action blocks  
-- Headers and footers  
-- Content sections  
-- Dashboard layouts  
+- Application UI Blocks and Components
+- Dashboards UI Blocks and Components
+- Marketing UI Blocks and Components
+- E-commerce UI Blocks and Components
+- AI UI Blocks and Components
+- and more
 
+  
 ### Templates
-Ready-to-use templates that combine components and blocks into complete pages and layouts.
+Ready-to-use unique React based Tailwind CSS templates that combine components and blocks into complete pages and layouts.
 
 ---
 
@@ -100,48 +145,6 @@ Accessibility is not an afterthought.
 
 ---
 
-## 📦 Installation
-
-Set up Tailgrids in your React project in a few minutes.
-
-#### Install & Initialize
-
-Run this in your project root:
-
-```bash
-npx @tailgrids/cli@latest init
-```
-
-This sets up Tailgrids, creates the config and base styles, and installs required dependencies.
-
----
-
-#### Add Styles
-
-Copy the contents of `tailgrids.css` into your main CSS file, like `globals.css` or `app.css`.
-
----
-
-#### Add a Component
-
-Add components using the CLI:
-
-```bash
-npx @tailgrids/cli@latest add button
-```
----
-
-#### Use It
-
-Import and use the component:
-
-```jsx
-import { Button } from "@/components/core/button";
-
-export default function Home() {
-  return <Button variant="primary">Hello Tailgrids!</Button>;
-}
-```
 ---
 
 
