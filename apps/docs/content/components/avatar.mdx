@@ -13,7 +13,9 @@ import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 
 # Avatar
 
-The Avatar component can be used to represent users or teams, displaying profile pictures, initials, or fallback content.
+React Avatar components are used to display user profile images, initials, or general fallback content. They are commonly used in user profiles, comment lists, team members, and account menus.
+
+This Avatar component is built with React and styled using Tailwind CSS, giving developers control over size, layout, and presentation. It supports various sizes, user status indicators, and an optional name/email label group.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -57,7 +59,7 @@ Import the component and pass the required props.
 ```tsx
 import { Avatar } from "@/registry/core/avatar";
 
-export default () => (
+export const AvatarExample = () => (
   <Avatar
     src="path/to/image.jpg"
     alt="Profile picture of Johurul Haque"

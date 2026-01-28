@@ -3,9 +3,9 @@ title: React Alert Component
 description: A React alert component for showing success, warning, error, or info messages. Used to give clear feedback after user actions with optional icons and actions.
 ---
 
+import { AlertPreview } from "@/components/preview/alert-preview";
 import { getFileContent } from "@/utils/get-file-content";
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
-import { AlertPreview } from "@/components/preview/alert-preview";
 
 # Alert
 
@@ -21,7 +21,7 @@ This Alert component is built with React and styled using Tailwind CSS, allowing
 
 ## Installation
 
-<Accordions>
+<Accordions defaultValue="CLI">
 <Accordion title="CLI">
 Install the component using the Tailgrids CLI.
 ```npm
@@ -47,6 +47,7 @@ Copy and paste the following component code into your project.
 </Accordions>
 
 ## Usage
+
 Import the component and pass the required props.
 
 ```tsx
@@ -99,10 +100,10 @@ export default () => (
 
 | Prop                | Type                                                     | Default     | Description                                |
 | ------------------- | -------------------------------------------------------- | ----------- | ------------------------------------------ |
-| `variant`           | `'success'`, `'danger'`, `'info'`, `'warning'`, `'gray'` | `'success'` | Sets the alert style              |
+| `variant`           | `'success'`, `'danger'`, `'info'`, `'warning'`, `'gray'` | `'success'` | Sets the alert style                       |
 | `title`             | `string`                                                 | -           | Optional heading for the alert             |
 | `message`           | `string`                                                 | -           | Main Alert message (required)              |
-| `withIcon`          | `boolean`                                                | `false`     | Shows an icon                        |
+| `withIcon`          | `boolean`                                                | `false`     | Shows an icon                              |
 | `open`              | `boolean`                                                | `true`      | Control visibility state                   |
 | `onClose`           | `() => void`                                             | -           | Callback fired when alert is closed        |
 | `actions`           | `object`                                                 | -           | Action buttons configuration               |

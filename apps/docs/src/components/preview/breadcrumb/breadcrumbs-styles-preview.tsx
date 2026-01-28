@@ -6,24 +6,24 @@ export default function BreadcrumbsStylesPreview() {
       <Breadcrumbs
         dividerType="chevron"
         items={[
-          { href: "/", label: "Home" },
-          { href: "/docs", label: "Documentation" }
+          { href: "#", label: "Home" },
+          { href: "#", label: "Documentation" }
         ]}
       />
 
       <Breadcrumbs
         dividerType="dot"
         items={[
-          { href: "/", label: "Home" },
-          { href: "/blog", label: "Blog" }
+          { href: "#", label: "Home" },
+          { href: "#", label: "Blog" }
         ]}
       />
 
       <Breadcrumbs
         dividerType="slash"
         items={[
-          { href: "/", label: "Home" },
-          { href: "/about", label: "About" }
+          { href: "#", label: "Home" },
+          { href: "#", label: "About" }
         ]}
       />
     </div>

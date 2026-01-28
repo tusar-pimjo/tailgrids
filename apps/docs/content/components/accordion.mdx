@@ -15,7 +15,9 @@ import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 
 # Accordion
 
-Accordions are UI components that allow users to toggle the visibility of content sections, helping organize information like FAQs and settings into a compact, manageable layout.
+React Accordion components let users show and hide sections of related content on a page. They are often used for FAQs, menus and submenus, settings panels, and other layouts where content needs to stay organized.
+
+This Accordion component is styled using Tailwind CSS, giving developers control over structure, layout, and styling.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -65,7 +67,7 @@ import {
   AccordionContent
 } from "@/components/accordion";
 
-export default () => (
+export const AccordionExample = () => (
   <AccordionRoot>
     <AccordionItem>
       <AccordionTrigger />
@@ -136,14 +138,6 @@ export default () => (
 >
   <AccordionCustom />
 </ComponentPreview>
-
-{/* ## Related Blocks
-
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-  <BlockCard />
-  <BlockCard />
-</div> */}
 
 ## API Reference
 
