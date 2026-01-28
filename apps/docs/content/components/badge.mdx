@@ -13,7 +13,9 @@ import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 
 # Badge
 
-Use the Badge component to highlight status, counts, or small metadata labels with semantic colors and icons for clear visual emphasis and categorization.
+React Badge components are used to display small labels, counts, status indicators, or metadata with semantic colors and optional icons. They are commonly used for notifications, categories, tags, and metadata across interfaces.
+
+This Badge component is built with React and styled using Tailwind CSS, giving developers control over size, color, and icon placement.
 
 <ComponentPreview
   codeSnippet={getFileContent("/src/components/preview/badge-preview.tsx")}
@@ -55,7 +57,7 @@ Import the component and pass the required props.
 ```tsx
 import { Badge } from "@/components/badge";
 
-export default () => <Badge color="primary">New</Badge>;
+export const BadgeExample = () => <Badge color="primary">New</Badge>;
 ```
 
 ## Examples
