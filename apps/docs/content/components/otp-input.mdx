@@ -3,9 +3,16 @@ title: React OTP Input Component
 description: A React OTP input component for entering one-time passwords or verification codes. Uses multiple input fields with auto focus, paste handling, and accessible behavior.
 ---
 
+import CodeBlockCard from "@/components/code-block-card";
+import { ComponentPreview } from "@/components/component-preview";
+import OtpInputControlledPreview from "@/components/preview/otp-input/otp-input-controlled-preview";
+import OtpInputCustomPreview from "@/components/preview/otp-input/otp-input-custom-preview";
+import OtpInputDefaultPreview from "@/components/preview/otp-input/otp-input-default-preview";
+import OtpInputDisabledPreview from "@/components/preview/otp-input/otp-input-disabled-preview";
+import OtpInputPreview from "@/components/preview/otp-input/otp-input-preview";
+import OtpInputSixDigitPreview from "@/components/preview/otp-input/otp-input-six-digit-preview";
 import { getFileContent } from "@/utils/get-file-content";
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
-import OtpInputPreview from "@/components/preview/otp-input-preview";
 
 # OTP Input
 
@@ -14,14 +21,16 @@ React OTP Input components are used to collect one-time passwords (OTP) or verif
 This OTP Input component is built with React and styled using Tailwind CSS. It splits the code into multiple-input fields and handles focus, paste, labels, and hints with keyboard interaction.
 
 <ComponentPreview
-  codeSnippet={getFileContent("/src/components/preview/otp-input-preview.tsx")}
+  codeSnippet={getFileContent(
+    "/src/components/preview/otp-input/otp-input-preview.tsx"
+  )}
 >
   <OtpInputPreview />
 </ComponentPreview>
 
 ## Installation
 
-<Accordions>
+<Accordions defaultValue="CLI">
 <Accordion title="CLI">
 Install the component using the Tailgrids CLI.
 
@@ -43,17 +52,18 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
 snippet={getFileContent("/src/registry/core/otp-input.tsx")}
 lang="tsx"
-/> 
-</Accordion> 
+/>
+</Accordion>
 </Accordions>
 
 ## Usage
+
 Import the component and control the OTP value using state.
 
 ```tsx
 import { OtpInput } from "@/registry/core/otp-input";
 
-export default function Example() {
+export default OtpInputPreview = () => {
   const [value, setValue] = useState("");
 
   return (
@@ -65,8 +75,62 @@ export default function Example() {
       hint="Enter the 6-digit code sent to your email."
     />
   );
-}
+};
 ```
+
+## Examples
+
+### Default
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/otp-input/otp-input-default-preview.tsx"
+  )}
+>
+  <OtpInputDefaultPreview />
+</ComponentPreview>
+
+### Six Digit Code
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/otp-input/otp-input-six-digit-preview.tsx"
+  )}
+>
+  <OtpInputSixDigitPreview />
+</ComponentPreview>
+
+### Controlled
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/otp-input/otp-input-controlled-preview.tsx"
+  )}
+>
+  <OtpInputControlledPreview />
+</ComponentPreview>
+
+### Disabled
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/otp-input/otp-input-disabled-preview.tsx"
+  )}
+>
+  <OtpInputDisabledPreview />
+</ComponentPreview>
+
+### Custom
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/otp-input/otp-input-custom-preview.tsx"
+  )}
+>
+  <OtpInputCustomPreview />
+</ComponentPreview>
+
+Note: The custom example demonstrates how you can override styles and structure for specific use cases like a secure login form.
 
 ## API Reference
 
@@ -99,12 +163,3 @@ Extends `input` element props (except `value`).
 - Focus ring follows system and custom Tailgrids styles
 - Digits select their content when focused—making replacement easier
 - Screen readers read the label and each digit individually
-
-## Notes
-
-- The 6-digit layout includes a **visual divider** after the 3rd digit
-- Uses `order` to ensure correct visual grouping
-- Works seamlessly in controlled or uncontrolled mode
-- `onChange` always provides the **full OTP value**
-- Non-numeric keys are prevented except Backspace, Delete, Tab, Meta
-- Paste only works when the full OTP length matches exactly
