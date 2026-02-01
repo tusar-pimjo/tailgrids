@@ -7,9 +7,13 @@ import { CodeBlockCard } from "@/components/code-block-card";
 import { ComponentPreview } from "@/components/component-preview";
 import ListCustomPreview from "@/components/preview/list/list-custom-preview";
 import ListHorizontalPreview from "@/components/preview/list/list-horizontal-preview";
+import ListOrderedUnorderedPreview from "@/components/preview/list/list-ordered-unordered-preview";
 import ListPreview from "@/components/preview/list/list-preview";
+import ListUsersPreview from "@/components/preview/list/list-users-preview";
 import ListVerticalPreview from "@/components/preview/list/list-vertical-preview";
 import ListWithActiveStatePreview from "@/components/preview/list/list-with-active-state-preview";
+import ListWithIconsPreview from "@/components/preview/list/list-with-icons-preview";
+import ListWithInputsPreview from "@/components/preview/list/list-with-inputs-preview";
 import ListWithoutDividersPreview from "@/components/preview/list/list-without-dividers-preview";
 import { getFileContent } from "@/utils/get-file-content";
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
@@ -126,9 +130,21 @@ Mark an item as active to indicate the current selection.
 
 Note: Active items are styled with primary background and text color. Active state is communicated via `data-active` attribute.
 
-### Custom
+### With Icons
 
-Combine icons, count badges, and different layouts to create rich list components.
+Add icons to list items for visual interest and better clarity.
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/list/list-with-icons-preview.tsx"
+  )}
+>
+  <ListWithIconsPreview />
+</ComponentPreview>
+
+### With Badges
+
+Use badges with icons to add more context and information to your list items.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -139,6 +155,42 @@ Combine icons, count badges, and different layouts to create rich list component
 </ComponentPreview>
 
 Note: Counts with `data-type="count"` are automatically positioned with `ml-auto`. Icons automatically inherit the current text color.
+
+### Ordered and Unordered Lists
+
+Create traditional ordered (numbered) and unordered (bullet) lists.
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/list/list-ordered-unordered-preview.tsx"
+  )}
+>
+  <ListOrderedUnorderedPreview />
+</ComponentPreview>
+
+### With Inputs
+
+Integrate checkboxes or radio buttons for selectable list items.
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/list/list-with-inputs-preview.tsx"
+  )}
+>
+  <ListWithInputsPreview />
+</ComponentPreview>
+
+### User List
+
+Display user information with avatars, names, emails, and status indicators.
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/list/list-users-preview.tsx"
+  )}
+>
+  <ListUsersPreview />
+</ComponentPreview>
 
 ## API Reference
 

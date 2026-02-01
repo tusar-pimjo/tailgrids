@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import type { ComponentProps } from "react";
 
 const listGroupStyles = cva(
-  "[&>li]:data-[active=true]:bg-primary-50 [&>li]:data-[active=true]:text-primary-500 flex w-full overflow-clip rounded-lg border border-neutral-200 text-sm text-neutral-500 [&_span]:data-[type=count]:ml-auto [&_svg]:text-current! [&>li]:relative [&>li]:flex [&>li]:items-center [&>li]:gap-3 [&>li]:px-3 [&>li]:py-2.5 [&>li]:hover:bg-neutral-100 [&>li]:hover:text-neutral-700",
+  "[&>li]:data-[active=true]:bg-primary-50 [&>li]:data-[active=true]:text-primary-500 flex w-full overflow-clip rounded-lg border border-neutral-200 text-sm text-neutral-500 [&_span]:data-[type=count]:ml-auto [&_svg]:text-current [&>li]:relative [&>li]:flex [&>li]:items-center [&>li]:gap-3 [&>li]:px-3 [&>li]:py-2.5 [&>li]:hover:bg-neutral-100 [&>li]:hover:text-neutral-700",
   {
     variants: {
       hideDividers: {
