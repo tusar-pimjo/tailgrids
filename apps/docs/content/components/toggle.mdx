@@ -71,6 +71,8 @@ The toggle switch comes in `sm` and `md` sizes. The default size is `sm`.
   <ToggleSizesPreview />
 </ComponentPreview>
 
+Note: The `size` prop adjusts the dimensions of the track and the thumb for both `sm` and `md` sizes.
+
 ### Label
 
 The label is optional. When omitted, provide an accessible name using `aria-label`.
@@ -95,6 +97,9 @@ Use the `checked` and `onChange` props to fully control the toggle state.
   <ToggleControlledPreview />
 </ComponentPreview>
 
+**Note:**
+Visual state is handled using CSS `peer` and `peer-checked` utilities. The primary color is applied to the background of the track when the switch is checked (`peer-checked:bg-primary-500`). The thumb position animates based on the checked state.
+
 ## API Reference
 
 ### Toggle
@@ -115,3 +120,5 @@ Extends `input` element props.
 - Visible label is properly associated via `htmlFor` and `id`
 - Input is visually hidden using `sr-only` but remains available to screen readers
 - Works correctly with assistive technologies and form semantics
+
+Note: This component is designed for use inside forms, settings pages, and preference panels.
