@@ -3,28 +3,36 @@ title: React TextArea Component
 description: A React TextArea component for multi-line text input. Uses the native <textarea> element with support for labels, validation states, controlled values, and accessible form handling.
 ---
 
+import TextAreaDisabledPreview from "@/components/preview/text-area/text-area-disabled-preview";
+import TextAreaPreview from "@/components/preview/text-area/text-area-preview";
+import TextAreaRowsPreview from "@/components/preview/text-area/text-area-rows-preview";
+import TextAreaStatesPreview from "@/components/preview/text-area/text-area-states-preview";
+import TextAreaWithHintPreview from "@/components/preview/text-area/text-area-with-hint-preview";
+import TextAreaWithLabelPreview from "@/components/preview/text-area/text-area-with-label-preview";
+import { TextArea } from "@/registry/core/text-area";
 import { getFileContent } from "@/utils/get-file-content";
-import TextAreaPreview from "@/components/preview/text-area-preview";
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 
-# TextArea
+# Text Area
 
-React TextArea components are used to collect longer, multi-line text input from users. They are commonly used for messages, descriptions, feedback forms, comments, and notes where a single-line input is not sufficient.
+React Text Area components are used to collect longer, multi-line text input from users. They are commonly used for messages, descriptions, feedback forms, comments, and notes where a single-line input is not sufficient.
 
-This TextArea component is built with React and styled using Tailwind CSS. It supports labels, hint text, validation states, and works in both controlled and uncontrolled form setups.
+This Text Area component is built with React and styled using Tailwind CSS. It supports labels, helper text, validation states, and works in both controlled and uncontrolled form setups.
 
 <ComponentPreview
-  codeSnippet={getFileContent("/src/components/preview/text-area-preview.tsx")}
+  codeSnippet={getFileContent(
+    "/src/components/preview/text-area/text-area-preview.tsx"
+  )}
 >
   <TextAreaPreview />
 </ComponentPreview>
 
 ## Installation
 
-<Accordions>
+<Accordions defaultValue="CLI">
 <Accordion title="CLI">
 Install the component using the Tailgrids CLI.
-```bash
+```npm
 npx @tailgrids/cli add text-area
 ```
 
@@ -33,7 +41,7 @@ npx @tailgrids/cli add text-area
 <Accordion title="Manual">
 Install the required dependency:
 
-```bash
+```npm
 npm i class-variance-authority
 ```
 
@@ -43,66 +51,91 @@ Copy and paste the following component code into your project.
 snippet={getFileContent("/src/registry/core/text-area.tsx")}
 lang="tsx"
 fileName="text-area.tsx"
-/> 
+/>
 </Accordion>
 </Accordions>
 
 ## Usage
+
 Import the component and pass the required props.
 
 ```tsx
 import { TextArea } from "@/registry/core/text-area";
 
-export default () => (
+export default TextAreaExample = () => (
   <TextArea label="Message" placeholder="Write your message..." />
 );
 ```
 
 ## Examples
 
-### Default
+### With Label
 
-```tsx
-<TextArea label="Message" placeholder="Write something..." />
-```
+Use the `label` prop to describe the text area.
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/text-area/text-area-with-label-preview.tsx"
+  )}
+>
+  <TextAreaWithLabelPreview />
+</ComponentPreview>
+
+Note: Labels are non-selectable with `select-none` for better UX.
 
 ### With Hint
 
-```tsx
-<TextArea
-  label="Bio"
-  hint="Tell us a little about yourself."
-  placeholder="Your bio..."
-/>
-```
+Use the `hint` prop to show helper text below the text area.
 
-### Error State
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/text-area/text-area-with-hint-preview.tsx"
+  )}
+>
+  <TextAreaWithHintPreview />
+</ComponentPreview>
 
-```tsx
-<TextArea
-  label="Feedback"
-  state="error"
-  hint="Feedback cannot be empty."
-  placeholder="Enter feedback..."
-/>
-```
+Note: The helper text uses `peer` class to enable styling based on text area state.
 
-### Success State
+### States
 
-```tsx
-<TextArea
-  label="Description"
-  state="success"
-  hint="Looks good!"
-  placeholder="Enter a short description..."
-/>
-```
+Use visual states to show validation feedback using `state` prop.
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/text-area/text-area-states-preview.tsx"
+  )}
+>
+  <TextAreaStatesPreview />
+</ComponentPreview>
+
+Note: Focus ring color matches the state (primary for default, danger for error, success for success).
 
 ### Disabled
 
-```tsx
-<TextArea label="Notes" disabled placeholder="Disabled textarea..." />
-```
+Use the `disabled` prop to prevent interaction.
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/text-area/text-area-disabled-preview.tsx"
+  )}
+>
+  <TextAreaDisabledPreview />
+</ComponentPreview>
+
+Note: Disabled state applies reduced opacity to the text area and helper text.
+
+### Custom Rows
+
+Use the `rows` prop to control the initial height.
+
+<ComponentPreview
+  codeSnippet={getFileContent(
+    "/src/components/preview/text-area/text-area-rows-preview.tsx"
+  )}
+>
+  <TextAreaRowsPreview />
+</ComponentPreview>
 
 ## API Reference
 
@@ -121,13 +154,6 @@ Extends `textarea` element props.
 
 - Label is automatically associated using a generated `id` and `htmlFor`.
 - Uses semantic `<textarea>` element.
-- Fully keyboard accessible
-- Disabled state is communicated visually and programmatically
-- Validation feedback is available through visible messaging
-
-## Notes
-
-- States are powered by `class-variance-authority` for easy extension.
-- Hint text color updates based on the current state
-- Fully compatible with controlled and uncontrolled form usage
-- Supports all standard textarea HTML attributes
+- Fully keyboard accessible.
+- Disabled state is communicated visually and programmatically.
+- Validation feedback is available through visible messaging.
