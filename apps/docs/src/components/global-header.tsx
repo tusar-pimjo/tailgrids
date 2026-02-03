@@ -80,23 +80,19 @@ export default function GlobalHeader() {
               <div className="flex gap-3 items-center">
                 <button
                   onClick={() => setIsSearchOpen(true)}
-                  className="hidden 2xl:flex h-11 2xl:w-[260px]  dark:bg-white/5 items-center gap-3 rounded-xl border border-gray-200 bg-white px-3 text-gray-400 dark:border-[#111827] transition"
+                  className="flex max-2xl:pr-1.5 max-2xl:pl-2 max-2xl:py-1 2xl:h-11 2xl:w-[260px]  dark:bg-white/5 items-center gap-1.5 2xl:gap-3 rounded-full 2xl:rounded-xl border border-gray-200 bg-white px-3 text-gray-400 dark:border-[#111827] transition hover:bg-gray-50"
                 >
                   <SearchIcon className="size-5" />
-                  <span className="hidden xl:flex text-sm flex-1">
+
+                  <span className="hidden 2xl:flex text-sm flex-1">
                     Quick search...
                   </span>
-                  <span className="hidden xl:flex h-6.5 w-10 items-center dark:border-[#111827] justify-center rounded-lg border border-gray-100 text-xs">
+
+                  <span className="flex h-6.5 w-10 items-center dark:border-[#111827] justify-center rounded-lg border border-gray-100 text-xs max-2xl:rounded-full">
                     ⌘ K
                   </span>
                 </button>
 
-                <button
-                  onClick={() => setIsSearchOpen(true)}
-                  className="2xl:hidden text-gray-700 dark:text-gray-300 hover:text-primary-500"
-                >
-                  <SearchIcon className="size-6" />
-                </button>
                 {/* Theme Toggle */}
                 <button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -134,6 +130,7 @@ export default function GlobalHeader() {
                   >
                     Account
                   </a>
+
                   <a
                     className="custom-link-btn-blue 
                   "
@@ -143,14 +140,10 @@ export default function GlobalHeader() {
                   </a>
                 </div>
               </div>
+
               {/* Mobile Menu - Hidden on lg+ where sidebar is always visible */}
               {/* Mobile Search Button */}
-              <button
-                onClick={() => setIsSearchOpen(true)}
-                className="hidden text-gray-700 dark:text-gray-300 hover:text-primary-500"
-              >
-                <SearchIcon className="size-6" />
-              </button>
+
               <button
                 type="button"
                 onClick={() => setOpen(!open)}
