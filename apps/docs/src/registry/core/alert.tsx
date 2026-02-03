@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { CheckCircle1, Xmark2x } from "@tailgrids/icons";
+import { Xmark2x } from "@tailgrids/icons";
 import { cva } from "class-variance-authority";
 import { useState } from "react";
 import { Button } from "./button";
@@ -20,7 +20,7 @@ const wrapperStyles = cva(
 );
 
 const iconWrapperStyles = cva(
-  "flex size-7 items-center justify-center rounded-lg",
+  "flex size-7 items-center justify-center rounded-lg [&>svg]:size-4",
   {
     variants: {
       variant: {
@@ -89,7 +89,7 @@ type PropsType = {
   title?: string;
   message: string;
   variant?: "success" | "danger" | "info" | "warning" | "gray";
-  withIcon?: boolean;
+  icon?: React.ReactNode;
   actions?: {
     primary?: {
       label: string;
@@ -107,7 +107,7 @@ export default function Alert({
   title,
   message,
   variant = "success",
-  withIcon,
+  icon,
   open = true,
   onClose,
   actions
@@ -138,11 +138,7 @@ export default function Alert({
       </button>
 
       <div className="grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-3.5">
-        {withIcon && (
-          <div className={iconWrapperStyles({ variant })}>
-            <CheckCircle1 className="size-4" />
-          </div>
-        )}
+        {icon && <div className={iconWrapperStyles({ variant })}>{icon}</div>}
 
         {title && <h4 className={titleStyles({ variant })}>{title}</h4>}
 

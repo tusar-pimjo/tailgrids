@@ -1,6 +1,8 @@
 "use client";
 
 import Alert from "@/registry/core/alert";
+import { CheckCircle1, InfoTriangle } from "@tailgrids/icons";
+import { InfoCircleIcon } from "../ui/icons";
 
 export function AlertPreview() {
   return (
@@ -9,27 +11,26 @@ export function AlertPreview() {
         variant="success"
         title="Success"
         message="Your changes have been saved successfully."
-        withIcon
+        icon={<CheckCircle1 />}
       />
 
       <Alert
         variant="info"
         message="A new software update is available. See what's new."
-        withIcon
+        icon={<InfoCircleIcon />}
       />
 
       <Alert
         variant="warning"
         title="Warning"
         message="Your subscription will expire in 3 days. Please renew to continue."
-        withIcon
+        icon={<InfoTriangle />}
       />
 
       <Alert
         variant="danger"
         title="Error"
         message="There was a problem processing your request. Please try again."
-        withIcon
         actions={{
           primary: {
             label: "Retry",
