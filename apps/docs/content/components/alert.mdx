@@ -51,7 +51,7 @@ Copy and paste the following component code into your project.
 Import the component and pass the required props.
 
 ```tsx
-import Alert from "@/components/core/alert";
+import Alert from "@/components/tailgrids/core/alert";
 import { CheckCircle1 } from "@tailgrids/icons";
 
 export default () => (
@@ -106,7 +106,7 @@ import { InfoTriangle } from "@tailgrids/icons";
 | `variant`           | `'success'`, `'danger'`, `'info'`, `'warning'`, `'gray'` | `'success'` | Sets the alert style                       |
 | `title`             | `string`                                                 | -           | Optional heading for the alert             |
 | `message`           | `string`                                                 | -           | Main Alert message (required)              |
-| `icon`              | `ReactNode`                                              | `undefined` | The icon to render                         |
+| `icon`              | `ReactNode`                                              | -           | The icon to render                         |
 | `open`              | `boolean`                                                | `true`      | Control visibility state                   |
 | `onClose`           | `() => void`                                             | -           | Callback fired when alert is closed        |
 | `actions`           | `object`                                                 | -           | Action buttons configuration               |

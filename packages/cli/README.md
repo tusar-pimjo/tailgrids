@@ -6,19 +6,28 @@ The Tailgrids CLI is a command-line tool that helps you manage Tailgrids compone
 
 ### `init`
 
-The `init` command initializes Tailgrids in your project. It creates a `tailwind.config.js` file with the Tailgrids preset and adds the necessary dependencies to your `package.json`.
-
-#### Usage
-
-To initialize Tailgrids in your project, run the following command in your project's root directory:
+The `init` command initializes Tailgrids in your project.
 
 ```bash
 npx @tailgrids/cli init
 ```
 
+This will prompt you to:
+
+- Select a theme for your components.
+- Configure an import alias for your project.
+
+The `init` command will create the following files:
+
+- `tailgrids.config.json`: Configuration file for the Tailgrids CLI.
+- `tailgrids.css`: The base styles for Tailgrids components.
+- A `cn` utility file for merging Tailwind CSS classes.
+
+It will also install the required dependencies (`clsx`, `@tailwindcss/forms`, and `tailwind-merge`).
+
 ### `add`
 
-The `add` command adds Tailgrids components to your project. It copies the component files to your project's `components/tailgrids` directory and adds the required dependencies.
+The `add` command adds Tailgrids components to your project. It copies the component files to your project's `components/tailgrids/core` directory and adds the required dependencies.
 
 #### Usage
 
@@ -31,7 +40,7 @@ npx @tailgrids/cli add <component-id-1> <component-id-2> ...
 For example, to add the `button` and `dialog` components, run the following command:
 
 ```bash
-npx tailgrids add button dialog
+npx @tailgrids/cli add button dialog
 ```
 
 This will create the following files in your project:
