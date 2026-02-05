@@ -13,7 +13,7 @@ export const REGISTRIES: Registry[] = [
         path: "/core/accordion.tsx"
       }
     ],
-    dependencies: ["class-variance-authority"]
+    dependencies: ["class-variance-authority", "@tailgrids/icons"]
   },
   {
     id: "alert",
@@ -27,7 +27,7 @@ export const REGISTRIES: Registry[] = [
         path: "/core/alert.tsx"
       }
     ],
-    dependencies: ["class-variance-authority"],
+    dependencies: ["class-variance-authority", "@tailgrids/icons"],
     requires: ["button"]
   },
   {
@@ -68,7 +68,8 @@ export const REGISTRIES: Registry[] = [
         type: "core",
         path: "/core/breadcrumbs.tsx"
       }
-    ]
+    ],
+    dependencies: ["@tailgrids/icons"]
   },
   {
     id: "button",
@@ -217,7 +218,7 @@ export const REGISTRIES: Registry[] = [
         path: "/core/pagination.tsx"
       }
     ],
-    dependencies: ["class-variance-authority"]
+    dependencies: ["class-variance-authority", "@tailgrids/icons"]
   },
   {
     id: "popover",
@@ -370,7 +371,7 @@ export const REGISTRIES: Registry[] = [
         path: "/core/toast.tsx"
       }
     ],
-    dependencies: ["class-variance-authority"],
+    dependencies: ["class-variance-authority", "@tailgrids/icons"],
     requires: ["avatar"]
   },
   {
