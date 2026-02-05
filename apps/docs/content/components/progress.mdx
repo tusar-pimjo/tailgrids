@@ -42,7 +42,7 @@ Copy the `Progress` component code into your project. No additional dependencies
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/progress.tsx")}
   lang="tsx"
-  fileName="components/ui/progress.tsx"
+  fileName="progress.tsx"
 />
 </Accordion>
 </Accordions>
@@ -63,7 +63,7 @@ export default function ProgressBasic() {
 
 ### Basic Progress
 
-Display a sleek, linear progress indicator focused purely on visual feedback of completion state.
+Use the progress bar without a label.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -75,7 +75,7 @@ Display a sleek, linear progress indicator focused purely on visual feedback of 
 
 ### Progress with Label
 
-Provide explicit feedback on the completeness of a task by toggling the `withLabel` prop to show the percentage.
+Display the percentage value next to the bar.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -87,7 +87,7 @@ Provide explicit feedback on the completeness of a task by toggling the `withLab
 
 ### Custom Progress
 
-Customize the appearance of the progress bar using `className` prop.
+Customize the appearance of the progress bar using class names.
 
 <ComponentPreview
   codeSnippet={getFileContent(

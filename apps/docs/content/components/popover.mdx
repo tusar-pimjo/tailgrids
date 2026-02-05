@@ -53,7 +53,7 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/popover.tsx")}
   lang="tsx"
-  fileName="components/ui/popover.tsx"
+  fileName="popover.tsx"
 />
 
 </Accordion>
@@ -123,7 +123,7 @@ export default function PopoverExample() {
 
 ### Default
 
-Start with a clean, informative floating panel using the `PopoverHeading` and `PopoverDescription` components for structured information.
+Basic popover with heading and description.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -135,7 +135,7 @@ Start with a clean, informative floating panel using the `PopoverHeading` and `P
 
 ### With Button
 
-Integrate interactive elements within your popover content to enable quick contextual actions without leaving the page.
+Popover content with action buttons.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -147,7 +147,7 @@ Integrate interactive elements within your popover content to enable quick conte
 
 ### With Link
 
-Include navigational links within the `PopoverContent` to guide users to related resources or documentation.
+Popover content with a link.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -159,7 +159,7 @@ Include navigational links within the `PopoverContent` to guide users to related
 
 ### Controlled Open State
 
-Manage the visibility of the popover programmatically using the `open` and `onOpenChange` props for more complex interactions.
+Control the open state using React state.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -171,7 +171,7 @@ Manage the visibility of the popover programmatically using the `open` and `onOp
 
 ### Custom Placement
 
-Precision-position your popover using the `placement` prop, supporting various orientations like top, bottom, and sides relative to the trigger.
+Change the popover position relative to the trigger.
 
 <ComponentPreview
   codeSnippet={getFileContent(

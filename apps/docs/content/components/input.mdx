@@ -50,7 +50,7 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/input.tsx")}
   lang="tsx"
-  fileName="components/ui/input.tsx"
+  fileName="input.tsx"
 />
 </Accordion>
 </Accordions>
@@ -71,7 +71,7 @@ export default InputPreview = () => (
 
 ### With Label
 
-Provide a clear description for your input using the `label` prop, which automatically links to the field for better accessibility.
+Use the `label` prop to describe the input field.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -85,7 +85,7 @@ Note: Labels are non-selectable with `select-none` for better UX. Placeholder te
 
 ### With Hint
 
-Display supportive helper text below the input field using the `hint` prop to guide users through form completion.
+Use the `hint` prop to show helper text below the input.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -99,7 +99,7 @@ Note: The input uses `peer` class to enable styling of the hint text based on in
 
 ### States
 
-Reflect different validation outcomes or prevent interaction using the `state` prop (supporting `default`, `error`, `success`) and the `disabled` attribute.
+Use visual states to show validation feedback, or disable the input.
 
 <ComponentPreview
   codeSnippet={getFileContent(

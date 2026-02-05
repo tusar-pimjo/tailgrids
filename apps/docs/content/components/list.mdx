@@ -53,7 +53,7 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/list.tsx")}
   lang="tsx"
-  fileName="components/ui/list.tsx"
+  fileName="list.tsx"
 />
 </Accordion>
 </Accordions>
@@ -108,7 +108,7 @@ Note: Horizontal lists have a max width of `fit-content`.
 
 ### Without Dividers
 
-Streamline your list's appearance by toggling the `hideDividers` prop to remove horizontal rules between items.
+You can remove dividers when visual separation is not needed. Dividers can be hidden with the `hideDividers` prop.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -120,7 +120,7 @@ Streamline your list's appearance by toggling the `hideDividers` prop to remove 
 
 ### With Active State
 
-Highlight the currently selected item visually and semantically across your navigation or menus by applying the `data-active` attribute.
+Mark an item as active to indicate the current selection.
 
 <ComponentPreview
   codeSnippet={getFileContent(

@@ -49,7 +49,7 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/accordion.tsx")}
   lang="tsx"
-  fileName="components/ui/accordion.tsx"
+  fileName="accordion.tsx"
 />
 </Accordion>
 </Accordions>
@@ -80,7 +80,7 @@ export const AccordionExample = () => (
 
 ### Style One (Default)
 
-Set `variant="style_one"` on `AccordionRoot` to use the default style.
+This is the default style for the accordion. No `variant` prop is required.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -140,7 +140,7 @@ Set `variant="style_five"` on `AccordionRoot` for this design.
 
 ### Custom
 
-Use `className` on `AccordionRoot`, `AccordionItem`, and `AccordionTrigger` to build a custom look.
+Use `className` to give a custom look to the component.
 
 <ComponentPreview
   codeSnippet={getFileContent(

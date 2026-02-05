@@ -47,7 +47,7 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/spinner/index.tsx")}
   lang="tsx"
-  fileName="components/ui/spinner.tsx"
+  fileName="spinner.tsx"
 />
 
 You'll also need the spinner SVG assets referenced in the component (`default.svg`, `dotted.svg`, `dotted-round.svg`).
@@ -55,19 +55,19 @@ You'll also need the spinner SVG assets referenced in the component (`default.sv
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/spinner/default.svg")}
   lang="svg"
-  fileName="components/ui/spinner/default.svg"
+  fileName="default.svg"
 />
 
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/spinner/dotted.svg")}
   lang="svg"
-  fileName="components/ui/spinner/dotted.svg"
+  fileName="dotted.svg"
 />
 
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/spinner/dotted-round.svg")}
   lang="svg"
-  fileName="components/ui/spinner/dotted-round.svg"
+  fileName="dotted-round.svg"
 />
 
 </Accordion>
@@ -89,7 +89,7 @@ export default function SpinnerExample() {
 
 ### Types
 
-Choose from three visual styles—`default`, `dotted`, and `dotted-round`—using the `type` prop to match your design language.
+The Spinner component has `default`, `dotted`, and `dotted-round` types.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -101,7 +101,7 @@ Choose from three visual styles—`default`, `dotted`, and `dotted-round`—usin
 
 ### Sizes
 
-Scale your loading indicator from `sm` to `xxl` using the `size` prop to perfectly fit any UI context, from inline text to full-page loaders.
+The Spinner component supports five pre-defined sizes: `sm`, `md`, `lg`, `xl`, and `xxl`.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -113,7 +113,7 @@ Scale your loading indicator from `sm` to `xxl` using the `size` prop to perfect
 
 ### In Buttons
 
-Enhance user experience by integrating spinners within buttons using the `sm` size to indicate active processing or pending actions.
+Spinners can be integrated into buttons to provide visual feedback during loading or pending actions.
 
 <ComponentPreview
   codeSnippet={getFileContent(

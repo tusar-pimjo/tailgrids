@@ -42,7 +42,7 @@ Copy and paste the component code into your project.
 <CodeBlockCard
 snippet={getFileContent("/src/registry/core/toggle.tsx")}
 lang="tsx"
-fileName="components/ui/toggle.tsx"
+fileName="toggle.tsx"
 />
 </Accordion>
 </Accordions>
@@ -61,7 +61,7 @@ export default function ToggleBasic() {
 
 ### Sizes
 
-Adjust the scale of your switch to match your layout with the `size` prop, offering `sm` and `md` options.
+The toggle switch comes in `sm` and `md` sizes. The default size is `sm`.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -75,7 +75,7 @@ Note: The `size` prop adjusts the dimensions of the track and the thumb for both
 
 ### Label
 
-Provide clear context for binary choices by adding an optional `label` to your toggle component.
+The label is optional. When omitted, provide an accessible name using `aria-label`.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -87,7 +87,7 @@ Provide clear context for binary choices by adding an optional `label` to your t
 
 ### Controlled State
 
-Manage the toggle's state programmatically using the `checked` and `onChange` props for precise interactive control.
+Use the `checked` and `onChange` props to fully control the toggle state.
 
 <ComponentPreview
   codeSnippet={getFileContent(

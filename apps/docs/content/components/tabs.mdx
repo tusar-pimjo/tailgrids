@@ -48,13 +48,13 @@ Copy and paste the following component code into your project. Make sure you hav
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/tabs.tsx")}
   lang="tsx"
-  fileName="components/ui/tabs.tsx"
+  fileName="tabs.tsx"
 />
 
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/badge.tsx")}
   lang="tsx"
-  fileName="components/ui/badge.tsx"
+  fileName="badge.tsx"
 />
 </Accordion>
 </Accordions>
@@ -113,7 +113,7 @@ Note: Only one tab panel is visible at a time. The `defaultValue` prop sets the 
 
 ### Variants
 
-Customize the tab list's visual tone using the `variant` prop, with support for both `default` and `minimal` styles.
+Use the `variant` prop to control the visual style of the tab list. Supported values are `default` and `minimal`.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -125,7 +125,7 @@ Customize the tab list's visual tone using the `variant` prop, with support for 
 
 ### With Icons
 
-Improve navigation clarity by adding an `icon` directly to your `TabTrigger` components for a more intuitive interface.
+You can pass an `icon` prop to the `TabTrigger` to display an icon before the tab label.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -139,7 +139,7 @@ Note: Icons are automatically sized to `20px` (1.25rem).
 
 ### With Badges
 
-Display real-time counts or status indicators next to tab labels by using the `badge` prop on the `TabTrigger`.
+Use the `badge` prop on `TabTrigger` to display a notification count or status indicator next to the label.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -153,7 +153,7 @@ Note: Badges use the Badge component with primary color.
 
 ### Horizontal Direction
 
-Switch to a standard horizontal tab arrangement by setting the `direction` prop to `horizontal` on the `TabRoot`.
+Set the `direction` prop to `horizontal` on `TabRoot` to stack the tab list and content vertically, with tabs arranged horizontally.
 
 <ComponentPreview
   codeSnippet={getFileContent(

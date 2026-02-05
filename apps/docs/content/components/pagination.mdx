@@ -51,7 +51,7 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/pagination.tsx")}
   lang="tsx"
-  fileName="components/ui/pagination.tsx"
+  fileName="pagination.tsx"
 />
 </Accordion>
 </Accordions>
@@ -76,7 +76,7 @@ export default PaginationExample = () => (
 
 ### Compact Variant
 
-Achieve a minimal visual footprint for tight layouts or secondary content by setting the `variant` prop to `compact`.
+Use the `compact` variant for a minimal style, often suited for smaller sections or footers.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -89,7 +89,7 @@ Achieve a minimal visual footprint for tight layouts or secondary content by set
 
 ### Full Side Layout
 
-The default `sideLayout` displays both text labels and icons for side navigation buttons, providing maximum clarity.
+This is the `default` layout, showing both the icon and the text label ("Previous"/"Next") for side buttons.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -102,7 +102,7 @@ The default `sideLayout` displays both text labels and icons for side navigation
 
 ### Label-Only Side Layout
 
-Prioritize text labels for previous and next buttons by setting the `sideLayout` to `label`. This layout automatically adjusts for mobile devices.
+Shows only the text label ("Previous"/"Next") on desktop, but hides it on mobile to save space.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -115,7 +115,7 @@ Prioritize text labels for previous and next buttons by setting the `sideLayout`
 
 ### Icon-Only Side Layout
 
-Use purely visual markers for navigation by setting the `sideLayout` prop to `icon`.
+Uses icons only for previous and next buttons.
 
 <ComponentPreview
   codeSnippet={getFileContent(

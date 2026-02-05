@@ -47,7 +47,7 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/breadcrumbs.tsx")}
   lang="tsx"
-  fileName="components/ui/breadcrumbs.tsx"
+  fileName="breadcrumbs.tsx"
 />
 </Accordion>
 </Accordions>
@@ -74,7 +74,7 @@ export const BreadcrumbsExample = () => (
 
 ### With Icons
 
-Enhance navigation context by adding an `icon` to individual items within the `items` array.
+Show navigation context by adding an `icon` to individual items within the `items` array.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -88,7 +88,7 @@ Note: Icons are automatically sized to `16px` (1rem) via the `[&>svg]:size-4` cl
 
 ### Divider Types
 
-Customize the path separator using the `dividerType` prop, with support for `slash`, `chevron`, and `dot` styles.
+Use different divider styles between breadcrumb items using the `dividerType` prop.
 
 <ComponentPreview
   codeSnippet={getFileContent(

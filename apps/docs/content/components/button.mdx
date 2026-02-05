@@ -43,7 +43,7 @@ npx @tailgrids/cli add button
 Install the required dependencies:
 
 ```npm
-npm i class-variance-authority @tailgrids/icons
+npm i class-variance-authority
 ```
 
 Copy and paste the following component code into your project.
@@ -51,7 +51,7 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
   snippet={getFileContent("/src/registry/core/button.tsx")}
   lang="tsx"
-  fileName="components/ui/button.tsx"
+  fileName="button.tsx"
 />
 </Accordion>
 </Accordions>
@@ -70,7 +70,7 @@ export const ButtonExample = () => <Button variant="primary">Click me</Button>;
 
 ### Variants
 
-Control the button's visual intent using the `variant` prop.
+Use variants to indicate the purpose of an action.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -84,7 +84,7 @@ Note: Ghost variant automatically adjusts focus ring size to `ring-2` for subtle
 
 ### Appearances
 
-Toggle between `fill` and `outline` styles using the `appearance` prop to match your design's depth and emphasis.
+Use appearances to control the visual style.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -96,7 +96,7 @@ Toggle between `fill` and `outline` styles using the `appearance` prop to match 
 
 ### Sizes
 
-Scale your buttons for different contexts with the `size` prop, supporting `xs`, `sm`, `md`, and `lg` options.
+Choose a size that fits the surrounding UI.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -108,7 +108,7 @@ Scale your buttons for different contexts with the `size` prop, supporting `xs`,
 
 ### With Icons
 
-Enhance actions with icons that scale automatically with the `size` and `variant` props. Use `iconOnly` to create perfectly square icon buttons.
+Icons are automatically adjusted based on the `size` and `variant` props.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -122,7 +122,7 @@ Note: The `iconOnly` prop adjusts padding to create square buttons for icon-only
 
 ### Disabled
 
-Set the `disabled` prop to `true` to programmatically prevent user interaction while preserving layout consistency.
+Use the disabled state to prevent interaction.
 
 <ComponentPreview
   codeSnippet={getFileContent(

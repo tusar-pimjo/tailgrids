@@ -50,7 +50,7 @@ Copy and paste the following component code into your project.
 <CodeBlockCard
 snippet={getFileContent("/src/registry/core/text-area.tsx")}
 lang="tsx"
-fileName="components/ui/text-area.tsx"
+fileName="text-area.tsx"
 />
 </Accordion>
 </Accordions>
@@ -71,7 +71,7 @@ export default TextAreaExample = () => (
 
 ### With Label
 
-Provide clear context and accessibility for longer text entries by using the `label` prop.
+Use the `label` prop to describe the text area.
 
 <ComponentPreview
   codeSnippet={getFileContent(
@@ -85,7 +85,7 @@ Note: Labels are non-selectable with `select-none` for better UX.
 
 ### With Hint
 
-Display supportive helper text below the text area using the `hint` prop to guide users.
+Use the `hint` prop to show helper text below the text area.
 
 <ComponentPreview
   codeSnippet={getFileContent(
